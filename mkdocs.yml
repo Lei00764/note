@@ -8,7 +8,7 @@ nav:
   - Home:
     - index.md
   - 软件:
-    - Software/index.md
+    - Software/C++语法.md
   - 科研:
     - Research/index.md
   - 开发:
