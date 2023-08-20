@@ -1,16 +1,29 @@
 # [info]
 site_name: 雷翔的个人网站 
-site_url: https://lei00764.github.io
+site_url: https://lei00764.github.io/note
 site_author: 雷翔
 site_description: 雷翔的个人网站
 
 nav:
   - Home:
     - index.md
+  - 软件:
+    - Software/index.md
+  - 科研:
+    - Research/index.md
   - 开发:
     - Dev/jetson nano 零基础入门.md
+    - Dev/Linux 开机自启动.md
   - 网页:
+    - Web/创建前后端.md
     - Web/前后端部署全流程.md
+  - 工具:
+    - Tools/版本控制 Git.md
+    - Tools/Git & GitHub.md
+    - Tools/云服务器使用百度网盘.md
+  - 转载:
+    - Ref/提问的智慧.md
+    
 
 # [UI]
 ## [top]
