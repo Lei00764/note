@@ -1,0 +1,1315 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="雷翔的个人网站">
+      
+      
+        <meta name="author" content="雷翔">
+      
+      
+        <link rel="canonical" href="https://lei00764.github.io/Dev/jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../../Web/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2%E5%85%A8%E6%B5%81%E7%A8%8B/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>jetson nano 零基础入门 - 雷翔的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../mkdocs/css/unordered-list-symbols.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#jetson-nano" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="雷翔的个人网站" class="md-header__button md-logo" aria-label="雷翔的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            雷翔的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              jetson nano 零基础入门
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Lei00764/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lei00764/note
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        开发
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Web/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2%E5%85%A8%E6%B5%81%E7%A8%8B/" class="md-tabs__link">
+        网页
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="雷翔的个人网站" class="md-nav__button md-logo" aria-label="雷翔的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    雷翔的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Lei00764/note" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lei00764/note
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">Home</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          开发
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          开发
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          jetson nano 零基础入门
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        jetson nano 零基础入门
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    前言
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    准备
+  </a>
+  
+    <nav class="md-nav" aria-label="准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    烧录系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    常用命令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    移除无用软件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip3" class="md-nav__link">
+    配置 pip3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    安装工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    模型部署
+  </a>
+  
+    <nav class="md-nav" aria-label="模型部署">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xxxonnx" class="md-nav__link">
+    导出 xxx.onnx 文件 (本地电脑)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trtexec-jetson-nano" class="md-nav__link">
+    配置 trtexec 环境变量 (jetson nano)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xxxengine-jetson-nano" class="md-nav__link">
+    导出 xxx.engine 文件 (jetson nano)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jetson-nano_1" class="md-nav__link">
+    修改推理代码 (jetson nano)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    编译运行
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    摄像头检测
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    串口通信
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    户外使用
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          网页
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          网页
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2%E5%85%A8%E6%B5%81%E7%A8%8B/" class="md-nav__link">
+        Vue3 + ASP.NET Web API 前后端部署
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    前言
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    准备
+  </a>
+  
+    <nav class="md-nav" aria-label="准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    烧录系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    常用命令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    移除无用软件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip3" class="md-nav__link">
+    配置 pip3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    安装工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    模型部署
+  </a>
+  
+    <nav class="md-nav" aria-label="模型部署">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xxxonnx" class="md-nav__link">
+    导出 xxx.onnx 文件 (本地电脑)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trtexec-jetson-nano" class="md-nav__link">
+    配置 trtexec 环境变量 (jetson nano)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xxxengine-jetson-nano" class="md-nav__link">
+    导出 xxx.engine 文件 (jetson nano)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jetson-nano_1" class="md-nav__link">
+    修改推理代码 (jetson nano)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    编译运行
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    摄像头检测
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    串口通信
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    户外使用
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/Lei00764/note/edit/main/docs/Dev/jetson nano 零基础入门.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="jetson-nano">jetson nano 零基础入门<a class="headerlink" href="#jetson-nano" title="Permanent link">&para;</a></h1>
+<h2 id="_1">前言<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>jetson nano 板子</p>
+<p>SD 卡、读取器</p>
+<p>无线网卡</p>
+<p>电源</p>
+<p>注意事项：</p>
+<ul>
+<li>python3</li>
+<li>pip3</li>
+</ul>
+<h2 id="_2">准备<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">烧录系统<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><code>jetson-nano-jp461-sd-card-image.zip</code>，解压，使用 <code>balenaEtcher</code> 软件将解压后的文件烧录到 SD 卡中</p>
+<p>调整板子上的跳线帽（请注意，板子上原本的跳线帽只插了一个针脚，如果你用 5V4A 的DC电源，需要把跳线帽轻轻拔起，把两个针脚都插上，才可以正常使用 DC 电源哟！</p>
+<p>将 SD 卡插入到 jetson nano 板子上，连接好鼠标、键盘、网线和显示器</p>
+<p>（板子上有一个绿色指示灯）</p>
+<h3 id="_4">常用命令<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>查看用户名：</p>
+<div class="highlight"><pre><span></span><code>whoami
+</code></pre></div>
+<p>查看ip地址：</p>
+<div class="highlight"><pre><span></span><code>ifconfig
+</code></pre></div>
+<p>切换高低功率
+有两种供电方式，10W和5W</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nvpmodel<span class="w"> </span>-q<span class="w">  </span><span class="c1"># 查看当前是那个模式</span>
+sudo<span class="w"> </span>nvpmodel<span class="w"> </span>-m<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c1"># 将当前模式切换到5W模式,将会自动关掉两个cpu,只使用cpu1,2</span>
+</code></pre></div>
+<p>两种模式，0 是高功率10w,1是低功率5w,默认状态是高功率。</p>
+<p>sudo nvpmodel -m 0</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>jetson_clocks<span class="w">  </span><span class="c1"># 固定 CPU 频率</span>
+</code></pre></div>
+<p>nano有两种供电方式，一种是5V 2.5A(10W)的microUSB供电；但如果你要有很多外设在（键盘、鼠标、wifi、显示器）在使用，最好用5V 4A(20W)的供电方式，来保证nano的正常工作。</p>
+<h3 id="_5">移除无用软件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>移除LibreOffice会为系统省很多空间，这个软件对做深度学习和计算机视觉算法也没有太多用</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>purge<span class="w"> </span>libreoffice*
+sudo<span class="w"> </span>apt-get<span class="w"> </span>clean
+</code></pre></div>
+<p>更换国内安装源：</p>
+<p>备份原先source.list</p>
+<div class="highlight"><pre><span></span><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+</code></pre></div>
+<p>修改source.list</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>vim<span class="w">  </span>/etc/apt/sources.list
+</code></pre></div>
+<p>将以下内容替换原内容</p>
+<div class="highlight"><pre><span></span><code>deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-security main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-updates main multiverse restricted universe
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-backports main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-security main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-updates main multiverse restricted universe
+deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-backports main multiverse restricted universe
+</code></pre></div>
+<p>更新软件列表</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span>
+</code></pre></div>
+<p>配置cuda的环境变量</p>
+<div class="highlight"><pre><span></span><code>vi ~/.bashrc
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/cuda/bin<span class="si">${</span><span class="nv">PATH</span><span class="p">:+:</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}}</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/cuda/lib64<span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="p">:+:</span><span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="si">}}</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_ROOT</span><span class="o">=</span>/usr/local/cuda
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>source ~/.bashrc
+</code></pre></div>
+<p>查看cuda版本：</p>
+<div class="highlight"><pre><span></span><code>nvcc<span class="w"> </span>-V
+</code></pre></div>
+<h3 id="pip3">配置 pip3<a class="headerlink" href="#pip3" title="Permanent link">&para;</a></h3>
+<p>了解 jetson 平台自带的 python 版本</p>
+<p>以 jetson nano为例，可以使用</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>/usr/bin/python*
+</code></pre></div>
+<p>安装 pip</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip
+</code></pre></div>
+<p>查看 pip 版本及安装路径</p>
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>--version
+<span class="c1"># pip 9.0.1 from /usr/Lub/python3/dist-packages (python 3.6)</span>
+</code></pre></div>
+<p>版本太低，更新版本</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip<span class="w"> </span>setuptools<span class="w"> </span>wheel
+</code></pre></div>
+<h3 id="_6">安装工具<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>安装 jtop，查看 CPU 和 GPU 资源</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>jetson-stats
+</code></pre></div>
+<p>使用 jtop</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>jtop
+</code></pre></div>
+<p>如果不能使用，请重启，或者自行百度</p>
+<h2 id="_7">模型部署<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>流程： <code>xx.pt</code> -&gt; <code>xx.onnx</code> -&gt; <code>xx.engine</code></p>
+<p>其中 <code>xx.pt</code> -&gt; <code>xx.onnx</code> 在电脑上完成，<code>xx.onnx</code> -&gt; <code>xx.engine</code> 在板子上实现</p>
+<h3 id="xxxonnx">导出 xxx.onnx 文件 (本地电脑)<a class="headerlink" href="#xxxonnx" title="Permanent link">&para;</a></h3>
+<p>下载 yolov8 代码</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ultralytics/ultralytics.git
+</code></pre></div>
+<p>下载将 <code>.onnx</code> 转换为 <code>xx.engine</code> 代码</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/shouxieai/infer.git
+</code></pre></div>
+<p>在 <code>ultralytics</code> 中创建一个 <code>weights</code> 文件夹，将训练好的模型文件 <code>best.pt</code> 放进去</p>
+<p>在 <code>ultralytics</code> 中创建 <code>detect.py</code> 文件，检测模型的正确性</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># @time   : 2023/7/12 10:23</span>
+<span class="c1"># @author : Xiang Lei</span>
+<span class="c1"># opencv自己有一个缓存，每次会顺序从自己的缓存中读取，而不是直接读取最新帧</span>
+<span class="c1"># 单独用一个线程实时捕获视频帧，主线程在需要时从子线程拷贝最近的帧使用即可</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+
+<span class="kn">from</span> <span class="nn">ultralytics</span> <span class="kn">import</span> <span class="n">YOLO</span>
+
+<span class="n">thread_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>  <span class="c1"># 线程锁</span>
+<span class="n">thread_exit</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># 线程退出标志</span>
+
+
+<span class="k">class</span> <span class="nc">MyThread</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">camera_id</span><span class="p">,</span> <span class="n">img_height</span><span class="p">,</span> <span class="n">img_width</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">camera_id</span> <span class="o">=</span> <span class="n">camera_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">img_height</span> <span class="o">=</span> <span class="n">img_height</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">img_width</span> <span class="o">=</span> <span class="n">img_width</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">img_height</span><span class="p">,</span> <span class="n">img_width</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_frame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">global</span> <span class="n">thread_exit</span>
+        <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">camera_id</span><span class="p">)</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">thread_exit</span><span class="p">:</span>
+            <span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
+                <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">img_width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">img_height</span><span class="p">))</span>
+                <span class="n">thread_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">frame</span>
+                <span class="n">thread_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">thread_exit</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">thread_exit</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">YOLO</span><span class="p">(</span><span class="s1">&#39;weights/best.pt&#39;</span><span class="p">)</span>
+    <span class="n">video_file</span> <span class="o">=</span> <span class="s2">&quot;try.mp4&quot;</span>
+
+    <span class="c1"># model = YOLO(&quot;yolov8n.pt&quot;)</span>
+    <span class="c1"># video_file = 0</span>
+    <span class="n">camera_id</span> <span class="o">=</span> <span class="n">video_file</span>
+    <span class="n">img_height</span> <span class="o">=</span> <span class="mi">640</span>
+    <span class="n">img_width</span> <span class="o">=</span> <span class="mi">640</span>
+
+    <span class="n">thread</span> <span class="o">=</span> <span class="n">MyThread</span><span class="p">(</span><span class="n">camera_id</span><span class="p">,</span> <span class="n">img_height</span><span class="p">,</span> <span class="n">img_width</span><span class="p">)</span>  <span class="c1"># 创建线程</span>
+    <span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>  <span class="c1"># 启动线程</span>
+
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">thread_exit</span><span class="p">:</span>
+        <span class="n">thread_lock</span><span class="o">.</span><span class="n">acquire</span><span class="p">()</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="n">thread</span><span class="o">.</span><span class="n">get_frame</span><span class="p">()</span>
+        <span class="n">thread_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">frame</span><span class="p">)</span>
+        <span class="n">annotated_frame</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+
+        <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;frame&quot;</span><span class="p">,</span> <span class="n">annotated_frame</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s2">&quot;q&quot;</span><span class="p">):</span>
+            <span class="n">thread_exit</span> <span class="o">=</span> <span class="kc">True</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+<p>在 <code>ultralytics</code> 中创建 <code>export.py</code> 文件，将 <code>best.py</code> 转换成 <code>best.onnx</code></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># @time   : 2023/7/13 20:38</span>
+<span class="c1"># @author : Xiang Lei</span>
+
+<span class="kn">from</span> <span class="nn">ultralytics</span> <span class="kn">import</span> <span class="n">YOLO</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">YOLO</span><span class="p">(</span><span class="s2">&quot;weights/best.pt&quot;</span><span class="p">)</span>
+
+<span class="n">success</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;onnx&quot;</span><span class="p">,</span> <span class="n">batch</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<p>将 <code>best.onnx</code> 放到 <code>infer/workspace</code> 中</p>
+<p>模型需要完成修改才能正确被infer框架使用，正常模型导出的输出为[1,6,8400]，其中1代表batch，6分别代表cx,cy,w,h,以及have_mask、no_mask两个类别分数，8400代表框的个数。首先infer框架的输出只支持[1,8400,6]这种形式的输出，因此我们需要在原始onnx的输出之前添加一个Transpose节点，infer仓库workspace/v8trans.py就是帮我们做这么一件事情，v8trans.py具体内容如下：</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">onnx</span>
+<span class="kn">import</span> <span class="nn">onnx.helper</span> <span class="k">as</span> <span class="nn">helper</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usage:</span><span class="se">\n</span><span class="s2"> python v8trans.py yolov8n.onnx&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+    <span class="n">file</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Not exist path: </span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span>
+
+    <span class="n">prefix</span><span class="p">,</span> <span class="n">suffix</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">dst</span> <span class="o">=</span> <span class="n">prefix</span> <span class="o">+</span> <span class="s2">&quot;.transd&quot;</span> <span class="o">+</span> <span class="n">suffix</span>
+
+    <span class="n">model</span> <span class="o">=</span> <span class="n">onnx</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">node</span>  <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">old_output</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">output</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;pre_transpose&quot;</span>
+
+    <span class="k">for</span> <span class="n">specout</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">output</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">specout</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">old_output</span><span class="p">:</span>
+            <span class="n">shape0</span> <span class="o">=</span> <span class="n">specout</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">tensor_type</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">dim</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">shape1</span> <span class="o">=</span> <span class="n">specout</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">tensor_type</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">dim</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">shape2</span> <span class="o">=</span> <span class="n">specout</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">tensor_type</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">dim</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">new_out</span> <span class="o">=</span> <span class="n">helper</span><span class="o">.</span><span class="n">make_tensor_value_info</span><span class="p">(</span>
+                <span class="n">specout</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                <span class="n">specout</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">tensor_type</span><span class="o">.</span><span class="n">elem_type</span><span class="p">,</span>
+                <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="p">)</span>
+            <span class="n">new_out</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">tensor_type</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">dim</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">CopyFrom</span><span class="p">(</span><span class="n">shape0</span><span class="p">)</span>
+            <span class="n">new_out</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">tensor_type</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">dim</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">CopyFrom</span><span class="p">(</span><span class="n">shape1</span><span class="p">)</span>
+            <span class="n">new_out</span><span class="o">.</span><span class="n">type</span><span class="o">.</span><span class="n">tensor_type</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">dim</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">CopyFrom</span><span class="p">(</span><span class="n">shape2</span><span class="p">)</span>
+            <span class="n">specout</span><span class="o">.</span><span class="n">CopyFrom</span><span class="p">(</span><span class="n">new_out</span><span class="p">)</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+        <span class="n">helper</span><span class="o">.</span><span class="n">make_node</span><span class="p">(</span><span class="s2">&quot;Transpose&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;pre_transpose&quot;</span><span class="p">],</span> <span class="p">[</span><span class="n">old_output</span><span class="p">],</span> <span class="n">perm</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Model save to </span><span class="si">{</span><span class="n">dst</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">onnx</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">0</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</code></pre></div>
+<p>在命令行终端输入如下指令即可添加Transpose节点，执行完成之后在当前目录下生成<code>best.transd.onnx</code>模型，该模型添加了Transpose节点。</p>
+<div class="highlight"><pre><span></span><code>python3<span class="w"> </span>v8trans.py<span class="w"> </span>best.onnx
+</code></pre></div>
+<p>（将ONNX模型 <code>best.transd.onnx</code> 放入到infer/workspace文件夹下）</p>
+<p><strong>将 <code>infer</code> 文件夹的所有内容放到 <code>jetson nano</code> 板子上</strong></p>
+<h3 id="trtexec-jetson-nano">配置 trtexec 环境变量 (jetson nano)<a class="headerlink" href="#trtexec-jetson-nano" title="Permanent link">&para;</a></h3>
+<p>1.打开bashrc文件</p>
+<div class="highlight"><pre><span></span><code>vim<span class="w"> </span>~/.bashrc
+<span class="m">2</span>.按i进入输入模式，在最后一行添加如下语句
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>export PATH=/usr/src/tensorrt/bin:$PATH
+</code></pre></div>
+<p>3.按下esc，输入:wq!保存退出即可，最后刷新下环境变量</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<h3 id="xxxengine-jetson-nano">导出 xxx.engine 文件 (jetson nano)<a class="headerlink" href="#xxxengine-jetson-nano" title="Permanent link">&para;</a></h3>
+<p>在 <code>infer</code> 目录执行</p>
+<div class="highlight"><pre><span></span><code>trtexec<span class="w"> </span>--onnx<span class="o">=</span>workspace/best.transd.onnx<span class="w"> </span>--saveEngine<span class="o">=</span>workspace/best.transd.engine
+</code></pre></div>
+<p>开始编译，需要一段时间......</p>
+<h3 id="jetson-nano_1">修改推理代码 (jetson nano)<a class="headerlink" href="#jetson-nano_1" title="Permanent link">&para;</a></h3>
+<p>为了使用上面得到的 <code>best.transd.engine</code> ，需要对部分源码进行修改</p>
+<p>yolo模型的推理代码主要在src/main.cpp文件中，需要推理的图片放在workspace/inference文件夹中，源码修改较简单主要有以下几点：</p>
+<p>1.main.cpp 134，135行注释，只进行单张图片的推理</p>
+<p>2.main.cpp 104行 修改加载的模型为best_transd.sim.engine且类型为V8</p>
+<p>3.main.cpp 10行 新增mylabels数组，添加自训练模型的类别名称</p>
+<p>4.mian.cpp 115行 cocolabels修改为mylabels</p>
+<p>具体修改如下</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// perf();                    //修改1 134 135行注释</span>
+<span class="w">  </span><span class="c1">// batch_inference();         </span>
+<span class="w">  </span><span class="n">single_inference</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">yolo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yolo</span><span class="o">::</span><span class="n">load</span><span class="p">(</span><span class="s">&quot;best_transd.engine&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">yolo</span><span class="o">::</span><span class="n">Type</span><span class="o">::</span><span class="n">V8</span><span class="p">);</span><span class="w">   </span><span class="c1">//  修改2</span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">mylabels</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;box&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cola&quot;</span><span class="p">};</span><span class="w">    </span><span class="c1">// 修改3 新增mylabels数组</span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mylabels</span><span class="p">[</span><span class="n">obj</span><span class="p">.</span><span class="n">class_label</span><span class="p">]</span><span class="w">       </span><span class="c1">// 修改4 cocolabels修改为mylabels</span>
+</code></pre></div>
+<h3 id="_8">编译运行<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>编译用到的Makefile文件需要修改，修改后的Makefile文件如下</p>
+<div class="highlight"><pre><span></span><code><span class="nv">cc</span><span class="w">        </span><span class="o">:=</span><span class="w"> </span>g++
+<span class="nv">nvcc</span><span class="w">      </span><span class="o">=</span><span class="w"> </span>/usr/local/cuda-10.2/bin/nvcc
+
+<span class="nv">cpp_srcs</span><span class="w">  </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>src<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.cpp&quot;</span><span class="k">)</span>
+<span class="nv">cpp_objs</span><span class="w">  </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>cpp_srcs:.cpp<span class="o">=</span>.cpp.o<span class="k">)</span>
+<span class="nv">cpp_objs</span><span class="w">  </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>cpp_objs:src/%<span class="o">=</span>objs/%<span class="k">)</span>
+<span class="nv">cpp_mk</span><span class="w">    </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>cpp_objs:.cpp.o<span class="o">=</span>.cpp.mk<span class="k">)</span>
+
+<span class="nv">cu_srcs</span><span class="w">   </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span>find<span class="w"> </span>src<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.cu&quot;</span><span class="k">)</span>
+<span class="nv">cu_objs</span><span class="w">   </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>cu_srcs:.cu<span class="o">=</span>.cu.o<span class="k">)</span>
+<span class="nv">cu_objs</span><span class="w">   </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>cu_objs:src/%<span class="o">=</span>objs/%<span class="k">)</span>
+<span class="nv">cu_mk</span><span class="w">     </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>cu_objs:.cu.o<span class="o">=</span>.cu.mk<span class="k">)</span>
+
+<span class="nv">include_paths</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>src<span class="w">        </span><span class="se">\</span>
+<span class="w">            </span>/usr/include/opencv4<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>/usr/include/aarch64-linux-gnu<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>/usr/local/cuda-10.2/include
+
+<span class="nv">library_paths</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>/usr/lib/aarch64-linux-gnu<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>/usr/local/cuda-10.2/lib64
+
+<span class="nv">link_librarys</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>opencv_core<span class="w"> </span>opencv_highgui<span class="w"> </span>opencv_imgproc<span class="w"> </span>opencv_videoio<span class="w"> </span>opencv_imgcodecs<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>nvinfer<span class="w"> </span>nvinfer_plugin<span class="w"> </span>nvonnxparser<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>cuda<span class="w"> </span>cublas<span class="w"> </span>cudart<span class="w"> </span>cudnn<span class="w"> </span><span class="se">\</span>
+<span class="w">            </span>stdc++<span class="w"> </span>dl
+
+<span class="nv">empty</span><span class="w">         </span><span class="o">:=</span>
+<span class="nv">export_path</span><span class="w">   </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>subst<span class="w"> </span><span class="k">$(</span>empty<span class="k">)</span><span class="w"> </span><span class="k">$(</span>empty<span class="k">)</span>,:,<span class="k">$(</span>library_paths<span class="k">))</span>
+
+<span class="nv">run_paths</span><span class="w">     </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>foreach<span class="w"> </span>item,<span class="k">$(</span>library_paths<span class="k">)</span>,-Wl,-rpath<span class="o">=</span><span class="k">$(</span>item<span class="k">))</span>
+<span class="nv">include_paths</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>foreach<span class="w"> </span>item,<span class="k">$(</span>include_paths<span class="k">)</span>,-I<span class="k">$(</span>item<span class="k">))</span>
+<span class="nv">library_paths</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>foreach<span class="w"> </span>item,<span class="k">$(</span>library_paths<span class="k">)</span>,-L<span class="k">$(</span>item<span class="k">))</span>
+<span class="nv">link_librarys</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">$(</span>foreach<span class="w"> </span>item,<span class="k">$(</span>link_librarys<span class="k">)</span>,-l<span class="k">$(</span>item<span class="k">))</span>
+
+<span class="nv">cpp_compile_flags</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>-std<span class="o">=</span>c++11<span class="w"> </span>-fPIC<span class="w"> </span>-w<span class="w"> </span>-g<span class="w"> </span>-pthread<span class="w"> </span>-fopenmp<span class="w"> </span>-O0
+<span class="nv">cu_compile_flags</span><span class="w">  </span><span class="o">:=</span><span class="w"> </span>-std<span class="o">=</span>c++11<span class="w"> </span>-g<span class="w"> </span>-w<span class="w"> </span>-O0<span class="w"> </span>-Xcompiler<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>cpp_compile_flags<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nv">link_flags</span><span class="w">        </span><span class="o">:=</span><span class="w"> </span>-pthread<span class="w"> </span>-fopenmp<span class="w"> </span>-Wl,-rpath<span class="o">=</span><span class="s1">&#39;$$ORIGIN&#39;</span>
+
+<span class="nv">cpp_compile_flags</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">$(</span>include_paths<span class="k">)</span>
+<span class="nv">cu_compile_flags</span><span class="w">  </span><span class="o">+=</span><span class="w"> </span><span class="k">$(</span>include_paths<span class="k">)</span>
+<span class="nv">link_flags</span><span class="w">        </span><span class="o">+=</span><span class="w"> </span><span class="k">$(</span>library_paths<span class="k">)</span><span class="w"> </span><span class="k">$(</span>link_librarys<span class="k">)</span><span class="w"> </span><span class="k">$(</span>run_paths<span class="k">)</span>
+
+<span class="cp">ifneq ($(MAKECMDGOALS), clean)</span>
+<span class="cp">-include $(cpp_mk) $(cu_mk)</span>
+<span class="cp">endif</span>
+
+<span class="nv">pro</span><span class="w">    </span><span class="o">:=</span><span class="w"> </span>workspace/pro
+<span class="nv">expath</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>library_path.txt
+
+<span class="nf">library_path.txt </span><span class="o">:</span><span class="w"> </span>
+<span class="w">    </span>@echo<span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="k">$(</span>export_path<span class="k">)</span>:<span class="s2">&quot;</span><span class="nv">$$</span><span class="s2">&quot;</span>LD_LIBRARY_PATH<span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$@</span>
+
+<span class="nf">workspace/pro </span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">cpp_objs</span><span class="k">)</span> <span class="k">$(</span><span class="nv">cu_objs</span><span class="k">)</span>
+<span class="w">        </span>@echo<span class="w"> </span>Link<span class="w"> </span><span class="nv">$@</span>
+<span class="w">        </span>@mkdir<span class="w"> </span>-p<span class="w"> </span><span class="k">$(</span>dir<span class="w"> </span><span class="nv">$@</span><span class="k">)</span>
+<span class="w">        </span>@<span class="k">$(</span>cc<span class="k">)</span><span class="w"> </span>$^<span class="w"> </span>-o<span class="w"> </span><span class="nv">$@</span><span class="w"> </span><span class="k">$(</span>link_flags<span class="k">)</span>
+
+<span class="nf">objs/%.cpp.o </span><span class="o">:</span><span class="w"> </span><span class="n">src</span>/%.<span class="n">cpp</span>
+<span class="w">    </span>@echo<span class="w"> </span>Compile<span class="w"> </span>CXX<span class="w"> </span>$&lt;
+<span class="w">    </span>@mkdir<span class="w"> </span>-p<span class="w"> </span><span class="k">$(</span>dir<span class="w"> </span><span class="nv">$@</span><span class="k">)</span>
+<span class="w">    </span>@<span class="k">$(</span>cc<span class="k">)</span><span class="w"> </span>-c<span class="w"> </span>$&lt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">$@</span><span class="w"> </span><span class="k">$(</span>cpp_compile_flags<span class="k">)</span>
+
+<span class="nf">objs/%.cu.o </span><span class="o">:</span><span class="w"> </span><span class="n">src</span>/%.<span class="n">cu</span>
+<span class="w">    </span>@echo<span class="w"> </span>Compile<span class="w"> </span>CUDA<span class="w"> </span>$&lt;
+<span class="w">    </span>@mkdir<span class="w"> </span>-p<span class="w"> </span><span class="k">$(</span>dir<span class="w"> </span><span class="nv">$@</span><span class="k">)</span>
+<span class="w">    </span>@<span class="k">$(</span>nvcc<span class="k">)</span><span class="w"> </span>-c<span class="w"> </span>$&lt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">$@</span><span class="w"> </span><span class="k">$(</span>cu_compile_flags<span class="k">)</span>
+
+<span class="nf">objs/%.cpp.mk </span><span class="o">:</span><span class="w"> </span><span class="n">src</span>/%.<span class="n">cpp</span>
+<span class="w">    </span>@echo<span class="w"> </span>Compile<span class="w"> </span>depends<span class="w"> </span>CXX<span class="w"> </span>$&lt;
+<span class="w">    </span>@mkdir<span class="w"> </span>-p<span class="w"> </span><span class="k">$(</span>dir<span class="w"> </span><span class="nv">$@</span><span class="k">)</span>
+<span class="w">    </span>@<span class="k">$(</span>cc<span class="k">)</span><span class="w"> </span>-M<span class="w"> </span>$&lt;<span class="w"> </span>-MF<span class="w"> </span><span class="nv">$@</span><span class="w"> </span>-MT<span class="w"> </span><span class="k">$(</span>@:.cpp.mk<span class="o">=</span>.cpp.o<span class="k">)</span><span class="w"> </span><span class="k">$(</span>cpp_compile_flags<span class="k">)</span>
+
+<span class="nf">objs/%.cu.mk </span><span class="o">:</span><span class="w"> </span><span class="n">src</span>/%.<span class="n">cu</span>
+<span class="w">    </span>@echo<span class="w"> </span>Compile<span class="w"> </span>depends<span class="w"> </span>CUDA<span class="w"> </span>$&lt;
+<span class="w">    </span>@mkdir<span class="w"> </span>-p<span class="w"> </span><span class="k">$(</span>dir<span class="w"> </span><span class="nv">$@</span><span class="k">)</span>
+<span class="w">    </span>@<span class="k">$(</span>nvcc<span class="k">)</span><span class="w"> </span>-M<span class="w"> </span>$&lt;<span class="w"> </span>-MF<span class="w"> </span><span class="nv">$@</span><span class="w"> </span>-MT<span class="w"> </span><span class="k">$(</span>@:.cu.mk<span class="o">=</span>.cu.o<span class="k">)</span><span class="w"> </span><span class="k">$(</span>cu_compile_flags<span class="k">)</span>
+
+<span class="nf">run   </span><span class="o">:</span><span class="w"> </span><span class="n">workspace</span>/<span class="n">pro</span>
+<span class="w">          </span>@cd<span class="w"> </span>workspace<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>./pro
+
+<span class="nf">clean </span><span class="o">:</span>
+<span class="w">    </span>@rm<span class="w"> </span>-rf<span class="w"> </span>objs<span class="w"> </span>workspace/pro
+<span class="w">    </span>@rm<span class="w"> </span>-rf<span class="w"> </span>library_path.txt
+<span class="w">    </span>@rm<span class="w"> </span>-rf<span class="w"> </span>workspace/Result.jpg
+
+<span class="c"># 导出符号，使得运行时能够链接上</span>
+<span class="k">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">:=</span><span class="k">$(</span>export_path<span class="k">)</span>:<span class="k">$(</span>LD_LIBRARY_PATH<span class="k">)</span>
+</code></pre></div>
+<p>编译运行</p>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>run
+</code></pre></div>
+<p>出现错误： make: Warning: File "xxx" has modification time yyy s in the future</p>
+<p>参考： https://blog.csdn.net/u012814856/article/details/99873057</p>
+<h2 id="_9">摄像头检测<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>简单写了一个摄像头检测的 demo，主要修改以下几点：</p>
+<p>1.main.cpp 新增yolo_video_demo()函数，具体内容参考下面</p>
+<p>2.main.cpp 新增调用yolo_video_demo()函数代码，具体内容参考下面</p>
+<div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">yolo_video_demo</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">engine_file</span><span class="p">){</span><span class="w">     </span><span class="c1">// 修改1 新增函数</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">yolo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yolo</span><span class="o">::</span><span class="n">load</span><span class="p">(</span><span class="n">engine_file</span><span class="p">,</span><span class="w"> </span><span class="n">yolo</span><span class="o">::</span><span class="n">Type</span><span class="o">::</span><span class="n">V8</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">yolo</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w">  </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// auto remote_show = create_zmq_remote_show();</span>
+
+<span class="w">  </span><span class="n">cv</span><span class="o">::</span><span class="n">Mat</span><span class="w"> </span><span class="n">frame</span><span class="p">;</span>
+<span class="w">  </span><span class="n">cv</span><span class="o">::</span><span class="n">VideoCapture</span><span class="w"> </span><span class="n">cap</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">cap</span><span class="p">.</span><span class="n">isOpened</span><span class="p">()){</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Engine is nullptr&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">while</span><span class="p">(</span><span class="nb">true</span><span class="p">){</span>
+<span class="w">    </span><span class="n">cap</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">frame</span><span class="p">);</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">objs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yolo</span><span class="o">-&gt;</span><span class="n">forward</span><span class="p">(</span><span class="n">cvimg</span><span class="p">(</span><span class="n">frame</span><span class="p">));</span>
+
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">obj</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">objs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<span class="w">      </span><span class="n">tie</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yolo</span><span class="o">::</span><span class="n">random_color</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="n">class_label</span><span class="p">);</span>
+<span class="w">      </span><span class="n">cv</span><span class="o">::</span><span class="n">rectangle</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="n">Point</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">top</span><span class="p">),</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="n">Point</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="n">right</span><span class="p">,</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">bottom</span><span class="p">),</span>
+<span class="w">                    </span><span class="n">cv</span><span class="o">::</span><span class="n">Scalar</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">),</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+
+<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mylabels</span><span class="p">[</span><span class="n">obj</span><span class="p">.</span><span class="n">class_label</span><span class="p">];</span>
+<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;%s %.2f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">confidence</span><span class="p">);</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="n">getTextSize</span><span class="p">(</span><span class="n">caption</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">).</span><span class="n">width</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">      </span><span class="n">cv</span><span class="o">::</span><span class="n">rectangle</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="n">Point</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="n">left</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">top</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">33</span><span class="p">),</span>
+<span class="w">                    </span><span class="n">cv</span><span class="o">::</span><span class="n">Point</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">,</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">top</span><span class="p">),</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="n">Scalar</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">),</span><span class="w"> </span><span class="mi">-1</span><span class="p">);</span>
+<span class="w">      </span><span class="n">cv</span><span class="o">::</span><span class="n">putText</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span><span class="w"> </span><span class="n">caption</span><span class="p">,</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="n">Point</span><span class="p">(</span><span class="n">obj</span><span class="p">.</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">top</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">5</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="n">Scalar</span><span class="o">::</span><span class="n">all</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">      </span><span class="n">imshow</span><span class="p">(</span><span class="s">&quot;frame&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">frame</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// remote_show-&gt;post(frame);</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cv</span><span class="o">::</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">27</span><span class="p">)</span>
+<span class="w">          </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">cap</span><span class="p">.</span><span class="n">release</span><span class="p">();</span>
+<span class="w">  </span><span class="n">cv</span><span class="o">::</span><span class="n">destroyAllWindows</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="c1">// 修改2 调用该函数</span>
+<span class="w">  </span><span class="c1">// perf();</span>
+<span class="w">  </span><span class="c1">// batch_inference();</span>
+<span class="w">  </span><span class="c1">// single_inference();</span>
+<span class="w">  </span><span class="n">yolo_video_demo</span><span class="p">(</span><span class="s">&quot;best.transd.sim.engine&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="_10">串口通信<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>先在nano上查看启用的串口</p>
+<p><code>ls -l /dev/tty*</code> </p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">777</span><span class="w"> </span>/dev/ttyUSB0
+</code></pre></div>
+<h2 id="_11">户外使用<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>使用 微雪 UPS Power Module (B) 电源</p>
+<p>安装教程：<a href="https://www.bilibili.com/video/BV1Be4y1Q7id">https://www.bilibili.com/video/BV1Be4y1Q7id</a></p>
+<p>参考：<a href="https://blog.csdn.net/qq_40672115/article/details/129640372">https://blog.csdn.net/qq_40672115/article/details/129640372</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      雷翔 CC-BY-4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/lei00764" target="_blank" rel="noopener" title="GitHub | lei00764" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../../mkdocs/javascripts/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+    
+  </body>
+</html>
