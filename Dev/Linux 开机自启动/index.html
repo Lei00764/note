@@ -12,21 +12,27 @@
         <meta name="author" content="雷翔">
       
       
+        <link rel="canonical" href="https://lei00764.github.io/note/Dev/Linux%20%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8/">
       
       
-      <link rel="icon" href="/note/assets/images/favicon.png">
+        <link rel="prev" href="../jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+      
+      
+        <link rel="next" href="../../Web/%E5%88%9B%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>雷翔的个人网站</title>
+        <title>Linux 开机自启动 - 雷翔的个人网站</title>
       
     
     
-      <link rel="stylesheet" href="/note/assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="/note/assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -42,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="/note/mkdocs/css/no-footer.css">
+      <link rel="stylesheet" href="../../mkdocs/css/no-footer.css">
     
-      <link rel="stylesheet" href="/note/mkdocs/css/unordered-list-symbols.css">
+      <link rel="stylesheet" href="../../mkdocs/css/unordered-list-symbols.css">
     
-    <script>__md_scope=new URL("/note/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,6 +80,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#linux" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,7 +95,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/note/." title="雷翔的个人网站" class="md-header__button md-logo" aria-label="雷翔的个人网站" data-md-component="logo">
+    <a href="../.." title="雷翔的个人网站" class="md-header__button md-logo" aria-label="雷翔的个人网站" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -103,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Linux 开机自启动
             
           </span>
         </div>
@@ -209,7 +220,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/note/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     </li>
@@ -225,7 +236,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/note/Software/" class="md-tabs__link">
+      <a href="../../Software/" class="md-tabs__link">
         软件
       </a>
     </li>
@@ -241,7 +252,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/note/Research/" class="md-tabs__link">
+      <a href="../../Research/" class="md-tabs__link">
         科研
       </a>
     </li>
@@ -251,13 +262,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/note/Dev/jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+      <a href="../jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-tabs__link md-tabs__link--active">
         开发
       </a>
     </li>
@@ -273,7 +286,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/note/Web/%E5%88%9B%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF/" class="md-tabs__link">
+      <a href="../../Web/%E5%88%9B%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF/" class="md-tabs__link">
         网页
       </a>
     </li>
@@ -289,7 +302,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/note/Tools/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%20Git/" class="md-tabs__link">
+      <a href="../../Tools/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%20Git/" class="md-tabs__link">
         工具
       </a>
     </li>
@@ -305,7 +318,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/note/Ref/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" class="md-tabs__link">
+      <a href="../../Ref/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" class="md-tabs__link">
         转载
       </a>
     </li>
@@ -333,7 +346,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/note/." title="雷翔的个人网站" class="md-nav__button md-logo" aria-label="雷翔的个人网站" data-md-component="logo">
+    <a href="../.." title="雷翔的个人网站" class="md-nav__button md-logo" aria-label="雷翔的个人网站" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -384,7 +397,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/note/.">Home</a>
+          <a href="../..">Home</a>
           
         </div>
       
@@ -431,7 +444,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/note/Software/">软件</a>
+          <a href="../../Software/">软件</a>
           
         </div>
       
@@ -478,7 +491,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/note/Research/">科研</a>
+          <a href="../../Research/">科研</a>
           
         </div>
       
@@ -503,16 +516,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
         
@@ -527,7 +540,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           开发
@@ -540,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Dev/jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-nav__link">
+      <a href="../jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-nav__link">
         jetson nano 零基础入门
       </a>
     </li>
@@ -552,11 +565,147 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/note/Dev/Linux%20%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Linux 开机自启动
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Linux 开机自启动
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#desktop" class="md-nav__link">
+    .desktop开机自启动
+  </a>
+  
+    <nav class="md-nav" aria-label=".desktop开机自启动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xdg-autostart" class="md-nav__link">
+    XDG Autostart 规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desktop_1" class="md-nav__link">
+    .desktop文件格式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    demo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etcrclocal" class="md-nav__link">
+    修改 /etc/rc.local 文件
+  </a>
+  
+    <nav class="md-nav" aria-label="修改 /etc/rc.local 文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo_1" class="md-nav__link">
+    demo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemd" class="md-nav__link">
+    使用 systemd 服务
+  </a>
+  
+    <nav class="md-nav" aria-label="使用 systemd 服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    使用步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -611,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Web/%E5%88%9B%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF/" class="md-nav__link">
+      <a href="../../Web/%E5%88%9B%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF/" class="md-nav__link">
         创建前后端
       </a>
     </li>
@@ -625,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Web/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2%E5%85%A8%E6%B5%81%E7%A8%8B/" class="md-nav__link">
+      <a href="../../Web/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2%E5%85%A8%E6%B5%81%E7%A8%8B/" class="md-nav__link">
         Vue3 + ASP.NET Web API 前后端部署
       </a>
     </li>
@@ -684,7 +833,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Tools/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%20Git/" class="md-nav__link">
+      <a href="../../Tools/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%20Git/" class="md-nav__link">
         版本控制 Git
       </a>
     </li>
@@ -698,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Tools/Git%20%26%20GitHub/" class="md-nav__link">
+      <a href="../../Tools/Git%20%26%20GitHub/" class="md-nav__link">
         Git & GitHub
       </a>
     </li>
@@ -712,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Tools/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/" class="md-nav__link">
+      <a href="../../Tools/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/" class="md-nav__link">
         在云服务器上如何使用百度网盘下载文件
       </a>
     </li>
@@ -767,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Ref/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" class="md-nav__link">
+      <a href="../../Ref/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" class="md-nav__link">
         提问的智慧
       </a>
     </li>
@@ -798,6 +947,118 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#desktop" class="md-nav__link">
+    .desktop开机自启动
+  </a>
+  
+    <nav class="md-nav" aria-label=".desktop开机自启动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xdg-autostart" class="md-nav__link">
+    XDG Autostart 规范
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desktop_1" class="md-nav__link">
+    .desktop文件格式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    demo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etcrclocal" class="md-nav__link">
+    修改 /etc/rc.local 文件
+  </a>
+  
+    <nav class="md-nav" aria-label="修改 /etc/rc.local 文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo_1" class="md-nav__link">
+    demo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemd" class="md-nav__link">
+    使用 systemd 服务
+  </a>
+  
+    <nav class="md-nav" aria-label="使用 systemd 服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    使用步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -809,8 +1070,145 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+    <a href="https://github.com/Lei00764/note/edit/main/docs/Dev/Linux 开机自启动.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="linux">Linux 开机自启动<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
+<p>我这里使用开机自启动的目的是：在 Jetson Nano 板上部署 Yolov8 算法，用于可乐和保鲜盒的检测。希望在设备开机后，能够自动进行目标检测，并将检测结果发送给上位机。</p>
+<p>下面介绍三种 Linux 开机自启动方式</p>
+<ul>
+<li><code>.desktop</code> 开机自启动（尤其适用于有界面显示需求的程序）</li>
+<li>修改 <code>/etc/rc.d/rc.local</code> 文件</li>
+<li>使用 <code>systemd</code> 服务</li>
+</ul>
+<h2 id="desktop"><code>.desktop</code>开机自启动<a class="headerlink" href="#desktop" title="Permanent link">&para;</a></h2>
+<p>这里也是我选择的方式，我使用的硬件为 Jetson Nano B01 Ubuntu 18.04。</p>
+<h3 id="xdg-autostart">XDG Autostart 规范<a class="headerlink" href="#xdg-autostart" title="Permanent link">&para;</a></h3>
+<p>XDG Autostart 规范是一套用于 Linux 桌面环境的标准，旨在定义和管理开机自启动的应用程序。它是由 X Desktop Group（XDG）组织提出的，目的是为了提供一种统一的方式来处理开机自启动，使得在不同桌面环境中的用户体验更加一致和方便。</p>
+<p>根据 XDG Autostart 规范，每个用户都可以在其 <code>~/.config/autostart/</code>目录下创建 <code>.desktop</code> 文件，其中包含了关于开机自启动应用程序的相关信息。每个 <code>.desktop</code>文件都包含了一些关键的键值对，用于定义应用程序的名称、命令、图标、是否启用自启动等。</p>
+<h3 id="desktop_1"><code>.desktop</code>文件格式<a class="headerlink" href="#desktop_1" title="Permanent link">&para;</a></h3>
+<p><code>.desktop</code>文件是文本文件，采用 INI 文件格式，其中包含了启动应用程序的相关信息。</p>
+<div class="highlight"><pre><span></span><code>[Desktop Entry]
+Type=Application
+Name=Application Name
+Exec=/path/to/application
+X-GNOME-Autostart-enabled=true
+</code></pre></div>
+<ul>
+<li><code>[Desktop Entry]</code>：表示这是 <code>.desktop</code> 文件的开始。</li>
+<li><code>Type=Application</code>：表示这个 <code>.desktop</code>文件定义了一个应用程序。</li>
+<li><code>Name=Application Name</code>：设置应用程序的名称。</li>
+<li><code>Exec=/path/to/application</code>：指定应用程序的可执行文件路径。</li>
+<li><code>X-GNOME-Autostart-enabled=true</code>：这是一个可选项，表示允许应用程序在开机时自动启动。</li>
+</ul>
+<h3 id="demo">demo<a class="headerlink" href="#demo" title="Permanent link">&para;</a></h3>
+<p>在 <code>~/.config/autostart/</code>文件夹下创建 <code>demo.desktop</code>文件</p>
+<p>【待补充】</p>
+<h3 id="_1">注意<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>需要 <code>root</code> 权限</p>
+<h2 id="etcrclocal">修改 <code>/etc/rc.local</code> 文件<a class="headerlink" href="#etcrclocal" title="Permanent link">&para;</a></h2>
+<h3 id="_2">说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>在 Ubuntu 20.04 及更新版本中，<code>rc.local</code>已经被弃用并默认禁用。<code>rc.local</code> 脚本在旧版本的Ubuntu中用于在引导过程中执行命令或脚本，但它已被更现代的替代方案取代，如  <code>systemd</code> 服务</p>
+<p>对于需要开机自启动的程序，只需要在 <code>/etc/rc.local</code> 文件中添加相应的路径。</p>
+<p>下面来看一个具体的例子：</p>
+<h3 id="demo_1">demo<a class="headerlink" href="#demo_1" title="Permanent link">&para;</a></h3>
+<p>打开 <code>/etc/rc.local</code> 文件，添加如下内容：</p>
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+
+# 假设我们要启动名为 my_script.sh 的脚本
+# 并传递参数 123 和 &quot;Hello&quot;
+/path/to/my_script.sh 123 &quot;Hello&quot;
+
+exit 0
+</code></pre></div>
+<p>在文件末尾，确保添加了 <code>exit 0</code>，表示脚本执行完成</p>
+<p>确保 <code>rc.local</code> 文件具有可执行权限：</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>/etc/rc.local
+</code></pre></div>
+<p>最后，重启系统以使修改生效。</p>
+<h3 id="_3">注意<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>该方法仅使用于无界面的程序！！！</p>
+<h2 id="systemd">使用 <code>systemd</code> 服务<a class="headerlink" href="#systemd" title="Permanent link">&para;</a></h2>
+<h3 id="_4">说明<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>使用 <code>systemd</code> 服务在 Ubuntu 中实现开机自启动是一种现代且推荐的方式</p>
+<h3 id="_5">使用步骤<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>创建一个新的 <code>.service</code> 服务单元文件，将服务单元文件保存在 <code>/etc/systemd/system/</code>目录下。</p>
+</li>
+<li>
+<p>在该文件中添加以下内容</p>
+<div class="highlight"><pre><span></span><code>[Unit]
+Description=Your Service Description
+After=network.target    # 如果你的服务需要在网络启动后运行，可以添加其他依赖项
+
+[Service]
+Type=simple             # 可选项：simple、forking、oneshot等
+ExecStart=/path/to/your_script    # 指定你想要开机启动的脚本或程序的路径
+Restart=on-failure       # 可选项：on-failure、always、no等
+
+[Install]
+WantedBy=multi-user.target   # 指定在哪个target（例如：multi-user.target，graphical.target）下启动服务
+</code></pre></div>
+</li>
+</ol>
+<p>接着来启动服务并设置开机自启动：</p>
+<p>首先要重新加载systemd的配置</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload<span class="w">  </span>
+</code></pre></div>
+<p>然后设置自启动</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>your_service_name.service
+</code></pre></div>
+<p>运行完上述命令后，systemd 会在每次系统启动时自动启动该服务</p>
+<p>下面是一些其他的常用命令</p>
+<p>停止服务：停止当前服务，但下次重启机器会再次启动该服务</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>your_service_name.service
+</code></pre></div>
+<p>禁用服务：在下次系统启动时，该服务将不再自动运行</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>your_service_name.service
+</code></pre></div>
+<p>手动启动服务</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>your_service_name.service
+</code></pre></div>
+<p>查看所有全局服务的状态</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status
+</code></pre></div>
+<p>查看特定全局服务的状态 </p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>your_service_name.service
+</code></pre></div>
+<p>如果服务正在运行，你会看到一些类似以下的输出：</p>
+<div class="highlight"><pre><span></span><code>plaintextCopy code
+● your_service_name.service - Your Service Description
+   Loaded: loaded (/etc/systemd/system/your_service_name.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2023-08-07 15:00:00 UTC; 1h ago
+ Main PID: 1234 (your_program)
+    Tasks: 1 (limit: 4915)
+   Memory: 10.0M
+   CGroup: /system.slice/your_service_name.service
+           └─1234 /path/to/your_program
+</code></pre></div>
+<p>如果服务未运行，你会看到类似以下的输出：</p>
+<div class="highlight"><pre><span></span><code>plaintextCopy code
+● your_service_name.service - Your Service Description
+   Loaded: loaded (/etc/systemd/system/your_service_name.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+</code></pre></div>
+<p>在这个输出中，<code>Active</code>字段显示了服务的当前状态。<code>active (running)</code>表示服务正在运行，<code>inactive (dead)</code> 表示服务未运行。</p>
+<p>参考具体含义参考：<a href="https://ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html">https://ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html</a></p>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -863,13 +1261,13 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/note/", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "/note/assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="/note/assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
-          <script src="/note/mkdocs/javascripts/mathjax.js"></script>
+          <script src="../../mkdocs/javascripts/mathjax.js"></script>
         
       
         

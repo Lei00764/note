@@ -12,21 +12,27 @@
         <meta name="author" content="雷翔">
       
       
+        <link rel="canonical" href="https://lei00764.github.io/note/Tools/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%20Git/">
       
       
-      <link rel="icon" href="/note/assets/images/favicon.png">
+        <link rel="prev" href="../../Web/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2%E5%85%A8%E6%B5%81%E7%A8%8B/">
+      
+      
+        <link rel="next" href="../Git%20%26%20GitHub/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>雷翔的个人网站</title>
+        <title>版本控制 Git - 雷翔的个人网站</title>
       
     
     
-      <link rel="stylesheet" href="/note/assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="/note/assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -42,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="/note/mkdocs/css/no-footer.css">
+      <link rel="stylesheet" href="../../mkdocs/css/no-footer.css">
     
-      <link rel="stylesheet" href="/note/mkdocs/css/unordered-list-symbols.css">
+      <link rel="stylesheet" href="../../mkdocs/css/unordered-list-symbols.css">
     
-    <script>__md_scope=new URL("/note/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,6 +80,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#git" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -84,7 +95,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/note/." title="雷翔的个人网站" class="md-header__button md-logo" aria-label="雷翔的个人网站" data-md-component="logo">
+    <a href="../.." title="雷翔的个人网站" class="md-header__button md-logo" aria-label="雷翔的个人网站" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -103,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              版本控制 Git
             
           </span>
         </div>
@@ -209,7 +220,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/note/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     </li>
@@ -225,7 +236,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/note/Software/" class="md-tabs__link">
+      <a href="../../Software/" class="md-tabs__link">
         软件
       </a>
     </li>
@@ -241,7 +252,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/note/Research/" class="md-tabs__link">
+      <a href="../../Research/" class="md-tabs__link">
         科研
       </a>
     </li>
@@ -257,7 +268,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/note/Dev/jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+      <a href="../../Dev/jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-tabs__link">
         开发
       </a>
     </li>
@@ -273,7 +284,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/note/Web/%E5%88%9B%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF/" class="md-tabs__link">
+      <a href="../../Web/%E5%88%9B%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF/" class="md-tabs__link">
         网页
       </a>
     </li>
@@ -283,13 +294,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/note/Tools/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%20Git/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         工具
       </a>
     </li>
@@ -305,7 +318,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/note/Ref/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" class="md-tabs__link">
+      <a href="../../Ref/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" class="md-tabs__link">
         转载
       </a>
     </li>
@@ -333,7 +346,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/note/." title="雷翔的个人网站" class="md-nav__button md-logo" aria-label="雷翔的个人网站" data-md-component="logo">
+    <a href="../.." title="雷翔的个人网站" class="md-nav__button md-logo" aria-label="雷翔的个人网站" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -384,7 +397,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/note/.">Home</a>
+          <a href="../..">Home</a>
           
         </div>
       
@@ -431,7 +444,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/note/Software/">软件</a>
+          <a href="../../Software/">软件</a>
           
         </div>
       
@@ -478,7 +491,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/note/Research/">科研</a>
+          <a href="../../Research/">科研</a>
           
         </div>
       
@@ -540,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Dev/jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-nav__link">
+      <a href="../../Dev/jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-nav__link">
         jetson nano 零基础入门
       </a>
     </li>
@@ -554,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Dev/Linux%20%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8/" class="md-nav__link">
+      <a href="../../Dev/Linux%20%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8/" class="md-nav__link">
         Linux 开机自启动
       </a>
     </li>
@@ -611,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Web/%E5%88%9B%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF/" class="md-nav__link">
+      <a href="../../Web/%E5%88%9B%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF/" class="md-nav__link">
         创建前后端
       </a>
     </li>
@@ -625,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Web/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2%E5%85%A8%E6%B5%81%E7%A8%8B/" class="md-nav__link">
+      <a href="../../Web/%E5%89%8D%E5%90%8E%E7%AB%AF%E9%83%A8%E7%BD%B2%E5%85%A8%E6%B5%81%E7%A8%8B/" class="md-nav__link">
         Vue3 + ASP.NET Web API 前后端部署
       </a>
     </li>
@@ -645,16 +658,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
       
       
         
@@ -671,7 +684,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           工具
@@ -682,11 +695,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/note/Tools/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%20Git/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          版本控制 Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         版本控制 Git
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git_1" class="md-nav__link">
+    git 底层设计思想
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -698,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Tools/Git%20%26%20GitHub/" class="md-nav__link">
+      <a href="../Git%20%26%20GitHub/" class="md-nav__link">
         Git & GitHub
       </a>
     </li>
@@ -712,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Tools/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/" class="md-nav__link">
+      <a href="../%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/" class="md-nav__link">
         在云服务器上如何使用百度网盘下载文件
       </a>
     </li>
@@ -767,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/note/Ref/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" class="md-nav__link">
+      <a href="../../Ref/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" class="md-nav__link">
         提问的智慧
       </a>
     </li>
@@ -798,6 +852,23 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git_1" class="md-nav__link">
+    git 底层设计思想
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -809,8 +880,152 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+    <a href="https://github.com/Lei00764/note/edit/main/docs/Tools/版本控制 Git.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="git">版本控制 Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>如何使用 git ？</p>
+<p>不知道，只需记住并执行这些 shell 命令就可以进行协同工作。如果你出现错误，保存文件，再删除副本，重新下载就好。</p>
+</blockquote>
+<p>由 C 语言实现</p>
+<h2 id="git_1">git 底层设计思想<a class="headerlink" href="#git_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>使用有向无环图来记录</li>
+<li>使用分支来进行并行工作</li>
+</ul>
+<p>folder is called as "tree".</p>
+<p>file is called as "blob".</p>
+<p><img alt="截屏2023-05-28 17.08.54" src="https://lei-1306809548.cos.ap-shanghai.myqcloud.com/Obsidian/%E6%88%AA%E5%B1%8F2023-05-28%2017.08.54.png" /></p>
+<p>每一个圈对应一个快照，带有提交人信息，如author、message等</p>
+<p>快照 snapshow 对应 git 中的术语 commit</p>
+<div class="highlight"><pre><span></span><code><span class="nb">type</span> <span class="n">blob</span> <span class="o">=</span> <span class="n">array</span><span class="o">&lt;</span><span class="n">byte</span><span class="o">&gt;</span>
+<span class="nb">type</span> <span class="n">tree</span> <span class="o">=</span> <span class="nb">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">tree</span> <span class="o">|</span> <span class="n">blob</span><span class="o">&gt;</span>
+<span class="nb">type</span> <span class="n">commit</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">parents</span>  <span class="p">:</span> <span class="n">array</span><span class="o">&lt;</span><span class="n">commit</span><span class="o">&gt;</span>
+    <span class="n">author</span>   <span class="p">:</span> <span class="n">string</span>
+    <span class="n">message</span>  <span class="p">:</span> <span class="n">string</span>
+    <span class="n">snapshot</span> <span class="p">:</span> <span class="n">tree</span>
+<span class="p">}</span>
+<span class="nb">type</span> <span class="nb">object</span> <span class="o">=</span> <span class="n">blob</span> <span class="o">|</span> <span class="n">tree</span> <span class="o">|</span> <span class="n">commit</span>
+<span class="n">objects</span> <span class="o">=</span> <span class="nb">map</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="nb">object</span><span class="o">&gt;</span>
+<span class="n">哈希函数</span><span class="err">：</span><span class="n">将一对数据转成一个长字符串</span>
+</code></pre></div>
+<p>``` python
+def store(o):
+    id = sha1(o) # SHA-1 哈希
+    objects[id] = 0</p>
+<p>def load(id)
+    return objects[id]
+<div class="highlight"><pre><span></span><code>Git 维护一组对象，和一组引用
+</code></pre></div>
+references = map<string, string>
+用人可以理解的东西去对应哈希编码，而不是直接用随机的哈希编码
+<div class="highlight"><pre><span></span><code>## git 命令
+
+对对象或引用的操作
+
+```shell
+git init # 仓库可视化
+
+ls -a
+
+ls .git # objects 中存对象、refs 中存引用
+
+echo &quot;hello world&quot; &gt; hello.txt
+
+git status 
+
+# git 给用户更多选择，可以自由选择想要上传的
+git add hello.txt
+# 添加到暂存区，相当于告诉 git，这部分内容应该包含在下一次快照中
+
+git commit # 创建快照，在图中生成一个节点
+</code></pre></div></p>
+<blockquote>
+<p>Q：哈希值到底是什么？</p>
+<p>A：git cat-file -p 42fb7a2</p>
+<p>查看对象的具体内容</p>
+<p>Q：为什么要有 git add 和 git commit，而不是直接提交整个快照？</p>
+<p>A：因为有的时候我们并不希望在当前快照中保存所有内容</p>
+<p>git add 添加到暂存区，帮助我们实现这个功能</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>log<span class="w"> </span><span class="c1"># 查看提交历史，默认线性排序</span>
+git<span class="w"> </span>log<span class="w"> </span>--all<span class="w"> </span>--graph<span class="w"> </span>--decorate
+</code></pre></div>
+<p>git 提供引用，可读的命名</p>
+<p>HEAD 指向当前正在查看的提交</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 在历史记录之前移动</span>
+git<span class="w"> </span>checkout<span class="w"> </span>42fb7a2<span class="w">  </span><span class="c1"># 移动了 HEAD 指针</span>
+</code></pre></div>
+<p><img alt="截屏2023-05-28 17.41.08" src="https://lei-1306809548.cos.ap-shanghai.myqcloud.com/Obsidian/%E6%88%AA%E5%B1%8F2023-05-28%2017.41.08.png" /></p>
+<p>```bash 
+git diff # 显示当前目录比最近一次commit的区别
+git diff 42fb7a2 hello.txt # 执行比较的版本和比较的文件
+<div class="highlight"><pre><span></span><code>HEAD 指向的是当前正在查看的提交，注意和当前的文件目录的区别，在没有提交之前，当前的文件目录可以随意修改，而当前正在查看的提交是不会变的。
+
+注意 git 命令和底层数据模型之间的关联
+
+```bash
+git branch
+git branch cat # 创建一个新分支
+git checkout cat # 切换到新分支 HEAD 指向 cat
+</code></pre></div></p>
+<p><img alt="截屏2023-05-28 17.54.15" src="https://lei-1306809548.cos.ap-shanghai.myqcloud.com/Obsidian/%E6%88%AA%E5%B1%8F2023-05-28%2017.54.15.png" /></p>
+<p>在开发 cat 时同时开发 dog</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>master
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>dog<span class="w"> </span><span class="c1"># 创建和切换</span>
+</code></pre></div>
+<p><img alt="截屏2023-05-28 17.56.06" src="https://lei-1306809548.cos.ap-shanghai.myqcloud.com/Obsidian/%E6%88%AA%E5%B1%8F2023-05-28%2017.56.06.png" /></p>
+<p>将两个功能合并到一个版本</p>
+<p>先合并 cat 分支</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>master<span class="w"> </span><span class="c1"># 确保在 master 分支</span>
+git<span class="w"> </span>merge<span class="w"> </span>cat<span class="w"> </span><span class="c1"># 合并 cat 分支</span>
+<span class="c1"># 一个比较有趣的事，当一个分支是以 master 分支为基础开发时，要切换到该分支，只需将 HEAD 移向该分支，而不需要创建新的快照 fast forward</span>
+</code></pre></div>
+<p><img alt="截屏2023-05-28 17.59.48" src="https://lei-1306809548.cos.ap-shanghai.myqcloud.com/Obsidian/%E6%88%AA%E5%B1%8F2023-05-28%2017.59.48.png" /></p>
+<p>再合并 dog 分支</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>merge<span class="w"> </span>dog<span class="w">  </span><span class="c1"># 想要合并 dog 分支</span>
+<span class="c1"># CONFLICT 合并冲突</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>mergetool<span class="w">  </span><span class="c1"># git 提供的解决合并冲突的工具</span>
+</code></pre></div>
+<p><img alt="截屏2023-05-28 18.03.30" src="https://lei-1306809548.cos.ap-shanghai.myqcloud.com/Obsidian/%E6%88%AA%E5%B1%8F2023-05-28%2018.03.30.png" /></p>
+<p>删除冲突标记，修改代码</p>
+<p><img alt="截屏2023-05-28 18.04.01" src="https://lei-1306809548.cos.ap-shanghai.myqcloud.com/Obsidian/%E6%88%AA%E5%B1%8F2023-05-28%2018.04.01.png" /></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>merge<span class="w"> </span>--continue<span class="w"> </span><span class="c1"># 告诉 git 我们解决了冲突，继续合并</span>
+</code></pre></div>
+<p><img alt="截屏2023-05-28 18.04.47" src="https://lei-1306809548.cos.ap-shanghai.myqcloud.com/Obsidian/%E6%88%AA%E5%B1%8F2023-05-28%2018.04.47.png" /></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w">  </span><span class="c1"># 列出当前仓库的所有远程仓库</span>
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>&lt;name&gt;<span class="w"> </span>&lt;url&gt;<span class="w"> </span><span class="c1"># 默认名字是 origin</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>&lt;remote&gt;<span class="w"> </span>&lt;<span class="nb">local</span><span class="w"> </span>branch&gt;:&lt;remote<span class="w"> </span>branch&gt;
+<span class="c1"># 简化命令</span>
+git<span class="w"> </span>branch<span class="w"> </span>--set-upstream-to<span class="o">=</span>origin/master<span class="w"> </span><span class="c1"># 只需要第一次关联一下远程仓库</span>
+git<span class="w"> </span>push
+</code></pre></div>
+<p>默认所有 git 命令都是不联网的，所以需要特殊的命令来与远程仓库通信</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>feach<span class="w"> </span><span class="c1"># 与远程仓库通信，检索在远程仓库上的更改，并在本地上获取这些更改</span>
+git<span class="w"> </span>merge<span class="w"> </span><span class="c1"># 将本地分支更新到与远程分支指向相同的位置</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span><span class="nv">pull</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>git<span class="w"> </span>feach<span class="w"> </span>+<span class="w"> </span>git<span class="w"> </span>merge
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>&lt;url&gt;<span class="w"> </span>&lt;folder<span class="w"> </span>name&gt;<span class="w"> </span><span class="c1"># 获取远程仓库的副本</span>
+</code></pre></div>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -863,13 +1078,13 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/note/", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "/note/assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="/note/assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
-          <script src="/note/mkdocs/javascripts/mathjax.js"></script>
+          <script src="../../mkdocs/javascripts/mathjax.js"></script>
         
       
         
