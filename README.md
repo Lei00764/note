@@ -5,7 +5,7 @@
 ```bash
 mkdocs serve
 ```
-打开浏览器，访问 http://127.0.0.1:8000 来查看预览效果。
+打开浏览器，访问 <http://127.0.0.1:8000> 来查看预览效果。
 
 ## 部署文档到 GitHub Pages
 
@@ -16,4 +16,4 @@ mkdocs gh-deploy
 ```
 文档将会被构建并上传到名为 gh-pages 的分支。
 
-之后可以通过以下链接访问部署后的文档：https://lei00764.github.io/note/
+之后可以通过以下链接访问部署后的文档：<https://lei00764.github.io/note>
