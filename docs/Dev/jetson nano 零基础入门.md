@@ -171,6 +171,8 @@ sudo jtop
 
 ## 模型部署
 
+以下内容参考：<https://blog.csdn.net/qq_40672115/article/details/129640372>
+
 流程： `xx.pt` -> `xx.onnx` -> `xx.engine`
 
 其中 `xx.pt` -> `xx.onnx` 在电脑上完成，`xx.onnx` -> `xx.engine` 在板子上实现
@@ -584,6 +586,8 @@ int main() {	// 修改2 调用该函数
 ```bash
 sudo chmod 777 /dev/ttyUSB0
 ```
+
+参考：<https://blog.csdn.net/qq_25662827/article/details/122581819>
 
 ## 户外使用
 
