@@ -1,10 +1,10 @@
-# jetson nano 零基础入门
+# Jetson nano 部署 YoloV8
 
 ## 前言
 
 需要的物品：
 
-- jetson nano 板子
+- Jetson nano 板子
 - SD 卡、读取器
 - 无线网卡
 - 电源
@@ -18,13 +18,11 @@
 
 ### 烧录系统
 
-`jetson-nano-jp461-sd-card-image.zip`，解压，使用 `balenaEtcher` 软件将解压后的文件烧录到 SD 卡中
+下载 Jetson nano 系统镜像：<https://pan.baidu.com/s/178A568iL4usDGrbkvxckzA?pwd=nano> (提取码: nano)。根据 Jetson nano 型号选择 4GB 或者 2GB，我这里选择的是 4GB，JetPack4.6.1，对应压缩包 jetson-nano-jp461-sd-card-image.zip，下载完成后，进行解压，使用 balenaEtcher 软件将解压后的文件烧录到 SD 卡中
 
-调整板子上的跳线帽（请注意，板子上原本的跳线帽只插了一个针脚，如果你用 5V4A 的DC电源，需要把跳线帽轻轻拔起，把两个针脚都插上，才可以正常使用 DC 电源哟！
+调整板子上的跳线帽（请注意，板子上原本的跳线帽只插了一个针脚，如果你用 5V4A 的 DC 电源，需要把跳线帽轻轻拔起，把两个针脚都插上，才可以正常使用 DC 电源哟！
 
-将 SD 卡插入到 jetson nano 板子上，连接好鼠标、键盘、网线和显示器
-
-（板子上有一个绿色指示灯）
+将 SD 卡插入到 Jetson nano 板子上，连接好鼠标、键盘、无线网卡和显示器（板子上有一个绿色指示灯）
 
 ### 常用命令
 
@@ -40,49 +38,48 @@ whoami
 ifconfig
 ```
 
-切换高低功率
-有两种供电方式，10W和5W
+切换高低功率：Jetson nano 有两种供电方式，10W和5W
 
 ```bash
 sudo nvpmodel -q  # 查看当前是那个模式
-sudo nvpmodel -m 1 # 将当前模式切换到5W模式,将会自动关掉两个cpu,只使用cpu1,2
+
+sudo nvpmodel -m 1 # 将当前模式切换到5W模式，将会自动关掉两个cpu,只使用cpu1,2
+sudo nvpmodel -m 0 # 切换到高功率模式
 ```
 
-两种模式，0 是高功率10w,1是低功率5w,默认状态是高功率。
-
-sudo nvpmodel -m 0
+两种模式，0 是高功率10w，1是低功率5w，默认状态是高功率。
 
 ```bash
 sudo jetson_clocks  # 固定 CPU 频率
 ```
 
-nano有两种供电方式，一种是5V 2.5A(10W)的microUSB供电；但如果你要有很多外设在（键盘、鼠标、wifi、显示器）在使用，最好用5V 4A(20W)的供电方式，来保证nano的正常工作。
+Jetson nano 有两种常用供电方式，一种是 5V 2.5A(12.5W) 的 microUSB 供电；但如果你有很多外设在（如键盘、鼠标、wifi、显示器等）在使用，最好用 5V 4A(20W) 的供电方式，来保证 Jetson nano 的正常工作。
 
 ### 移除无用软件
 
-移除LibreOffice会为系统省很多空间，这个软件对做深度学习和计算机视觉算法也没有太多用
+移除 libreoffice 会为系统省很多空间，这个软件对做深度学习和计算机视觉算法也没有太多用
 
 ```bash
 sudo apt-get purge libreoffice*
 sudo apt-get clean
 ```
 
-更换国内安装源：
+### 更换国内安装源
 
-备份原先source.list
+备份原先 source.list
 
-```
+```bash
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 ```
 
 
-修改source.list
+修改 source.list
 
 ```bash
 sudo vim  /etc/apt/sources.list
 ```
 
-将以下内容替换原内容
+用以下内容替换原内容
 
 ```txt
 deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic main multiverse restricted universe
@@ -101,23 +98,27 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-backports main 
 sudo apt-get update 
 ```
 
-配置cuda的环境变量
-
-```
-vi ~/.bashrc
-```
+打开 ./bashrc，配置 cuda 的环境变量
 
 ```bash
+vim ~/.bashrc
+```
+
+向 ./bashrc 加入以下内容
+
+```txt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export CUDA_ROOT=/usr/local/cuda
 ```
 
-```
+使修改生效
+
+```bash
 source ~/.bashrc
 ```
 
-查看cuda版本：
+查看cuda版本
 
 ```shell
 nvcc -V
@@ -125,15 +126,13 @@ nvcc -V
 
 ### 配置 pip3 
 
-了解 jetson 平台自带的 python 版本
-
-以 jetson nano为例，可以使用
+了解 Jetson nano 平台自带的 Python 版本
 
 ```bash
 ls /usr/bin/python*
 ```
 
-安装 pip
+安装 pip3
 
 ```bash
 sudo apt update
@@ -179,7 +178,7 @@ sudo jtop
 
 ### 导出 xxx.onnx 文件 (本地电脑)
 
-下载 yolov8 代码
+下载 YoloV8 代码
 
 ```bash
 git clone https://github.com/ultralytics/ultralytics.git
@@ -191,9 +190,9 @@ git clone https://github.com/ultralytics/ultralytics.git
 git clone https://github.com/shouxieai/infer.git
 ```
 
-在 `ultralytics` 中创建一个 `weights` 文件夹，将训练好的模型文件 `best.pt` 放进去
+在 ultralytics 中创建一个 weights 文件夹，将训练好的模型文件 `best.pt` 放进去
 
-在 `ultralytics` 中创建 `detect.py` 文件，检测模型的正确性
+在 ultralytics 中创建 `detect.py` 文件，检测模型的正确性
 
 ```python
 # @time   : 2023/7/12 10:23
@@ -271,7 +270,7 @@ if __name__ == "__main__":
 
 ```
 
-在 `ultralytics` 中创建 `export.py` 文件，将 `best.py` 转换成 `best.onnx`
+在 ultralytics 中创建 `export.py` 文件，将 `best.py` 转换成 `best.onnx`
 
 ```python
 # @time   : 2023/7/13 20:38
@@ -341,9 +340,9 @@ if __name__ == "__main__":
     sys.exit(main())
 ```
 
-在命令行终端输入如下指令即可添加Transpose节点，执行完成之后在当前目录下生成`best.transd.onnx`模型，该模型添加了Transpose节点。
+在命令行终端输入如下指令即可添加Transpose节点，执行完成之后在当前目录下生成 `best.transd.onnx` 模型，该模型添加了Transpose节点。
 
-```shell
+```bash
 python3 v8trans.py best.onnx
 ```
 
@@ -351,48 +350,49 @@ python3 v8trans.py best.onnx
 
 **将 `infer` 文件夹的所有内容放到 `jetson nano` 板子上**
 
-### 配置 trtexec 环境变量 (jetson nano)
+### 配置 trtexec 环境变量 (Jetson nano)
 
-1.打开bashrc文件
+打开bashrc文件
 
 ```bash
 vim ~/.bashrc
-2.按i进入输入模式，在最后一行添加如下语句
 ```
 
-```
+按 i 进入输入模式，在最后一行添加如下语句
+
+```txt
 export PATH=/usr/src/tensorrt/bin:$PATH
 ```
 
-3.按下esc，输入:wq!保存退出即可，最后刷新下环境变量
+3.按下 esc 键，输入 `:wq!` 保存退出即可，最后刷新下环境变量
 
 ```bash
 source ~/.bashrc
 ```
 
-### 导出 xxx.engine 文件 (jetson nano)
+### 导出 `xxx.engine` 文件 (Jetson nano)
 
-在 `infer` 目录执行
+在 infer 目录执行
 
 ```bash
 trtexec --onnx=workspace/best.transd.onnx --saveEngine=workspace/best.transd.engine
 ```
 
-开始编译，需要一段时间......
+开始编译，需要一段时间
 
-### 修改推理代码 (jetson nano)
+### 修改推理代码 (Jetson nano)
 
 为了使用上面得到的 `best.transd.engine` ，需要对部分源码进行修改
 
-yolo模型的推理代码主要在src/main.cpp文件中，需要推理的图片放在workspace/inference文件夹中，源码修改较简单主要有以下几点：
+yolo 模型的推理代码主要在 src/main.cpp 文件中，需要推理的图片放在 workspace/inference 文件夹中，源码修改较简单主要有以下几点：
 
-1.main.cpp 134，135行注释，只进行单张图片的推理
+1.main.cpp 134，135 行注释，只进行单张图片的推理
 
-2.main.cpp 104行 修改加载的模型为best_transd.sim.engine且类型为V8
+2.main.cpp 104 行 修改加载的模型为 best_transd.sim.engine 且类型为 V8
 
-3.main.cpp 10行 新增mylabels数组，添加自训练模型的类别名称
+3.main.cpp 10 行 新增 mylabels 数组，添加自训练模型的类别名称
 
-4.mian.cpp 115行 cocolabels修改为mylabels
+4.mian.cpp 115 行 cocolabels 修改为 mylabels
 
 具体修改如下
 
@@ -409,12 +409,11 @@ auto yolo = yolo::load("best_transd.engine", yolo::Type::V8);	//  修改2
 static const char *mylabels[] = {"box", "cola"};	// 修改3 新增mylabels数组
 
 auto name = mylabels[obj.class_label]		// 修改4 cocolabels修改为mylabels
-
 ```
 
 ### 编译运行
 
-编译用到的Makefile文件需要修改，修改后的Makefile文件如下
+编译用到的 Makefile 文件需要修改，修改后的 Makefile 文件如下
 
 ```makefile
 cc        := g++
@@ -520,9 +519,9 @@ make run
 
 简单写了一个摄像头检测的 demo，主要修改以下几点：
 
-1.main.cpp 新增yolo_video_demo()函数，具体内容参考下面
+1.main.cpp 新增 yolo_video_demo() 函数，具体内容参考下面
 
-2.main.cpp 新增调用yolo_video_demo()函数代码，具体内容参考下面
+2.main.cpp 新增调用 yolo_video_demo() 函数代码，具体内容参考下面
 
 ```cpp
 static void yolo_video_demo(const string& engine_file){		// 修改1 新增函数
@@ -578,21 +577,19 @@ int main() {	// 修改2 调用该函数
 
 ## 串口通信
 
-
-先在nano上查看启用的串口
-
-`ls -l /dev/tty*` 
+先在 Jetson nano 上查看启用的串口
 
 ```bash
-sudo chmod 777 /dev/ttyUSB0
+ls -l /dev/tty*
 ```
 
 参考：<https://blog.csdn.net/qq_25662827/article/details/122581819>
 
 ## 户外使用
 
-使用 微雪 UPS Power Module (B) 电源
+使用微雪 UPS Power Module (B) 电源
 
 安装教程：<https://www.bilibili.com/video/BV1Be4y1Q7id>
 
 参考：<https://blog.csdn.net/qq_40672115/article/details/129640372>
+

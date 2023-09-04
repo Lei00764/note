@@ -10,7 +10,7 @@ nav:
   - 科研:
     - Research/index.md
   - 开发:
-    - Dev/jetson nano 零基础入门.md
+    - Dev/Jetson nano 部署 YoloV8.md
     - Dev/Linux 开机自启动.md
   - 网页:
     - Web/创建前后端项目.md

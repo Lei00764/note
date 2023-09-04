@@ -1,5 +1,3 @@
-# Linux 开机自启动
-
 我这里使用开机自启动的目的是：在 Jetson Nano 板上部署 Yolov8 算法，用于可乐和保鲜盒的检测。希望在设备开机后，能够自动进行目标检测，并将检测结果发送给上位机。
 
 下面介绍三种 Linux 开机自启动方式
@@ -40,7 +38,18 @@ X-GNOME-Autostart-enabled=true
 
 在 `~/.config/autostart/ `文件夹下创建 `demo.desktop `文件
 
-【待补充】
+```
+[Desktop Entry]
+Type=Application
+Exec=gnome-terminal -x bash -c "/home/lei/Desktop/infer/workspace/qzj.sh;exec bash"
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=qzj_infer
+Name=qzj_infer
+Comment[en_US]=start qzj_infer program
+Comment=start qzj_infer program
+```
 
 ### 注意
 
@@ -182,5 +191,6 @@ plaintextCopy code
 ```
 
 在这个输出中，`Active `字段显示了服务的当前状态。`active (running)`表示服务正在运行，`inactive (dead)` 表示服务未运行。
+
 
 参考具体含义参考：<https://ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html>
