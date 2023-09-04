@@ -12,7 +12,7 @@
         <meta name="author" content="雷翔">
       
       
-        <link rel="canonical" href="https://lei00764.github.io/note/Dev/jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+        <link rel="canonical" href="https://lei00764.github.io/note/Dev/Jetson%20nano%20%E9%83%A8%E7%BD%B2%20YoloV8/">
       
       
         <link rel="prev" href="../../Research/">
@@ -25,7 +25,7 @@
     
     
       
-        <title>jetson nano 零基础入门 - 雷翔的个人网站</title>
+        <title>Jetson nano 部署 YoloV8 - 雷翔的个人网站</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#jetson-nano" class="md-skip">
+        <a href="#jetson-nano-yolov8" class="md-skip">
           跳转至
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              jetson nano 零基础入门
+              Jetson nano 部署 YoloV8
             
           </span>
         </div>
@@ -524,12 +524,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          jetson nano 零基础入门
+          Jetson nano 部署 YoloV8
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        jetson nano 零基础入门
+        Jetson nano 部署 YoloV8
       </a>
       
         
@@ -584,6 +584,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    更换国内安装源
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pip3" class="md-nav__link">
     配置 pip3
   </a>
@@ -591,7 +598,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     安装工具
   </a>
   
@@ -603,7 +610,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     模型部署
   </a>
   
@@ -619,27 +626,27 @@
         
           <li class="md-nav__item">
   <a href="#trtexec-jetson-nano" class="md-nav__link">
-    配置 trtexec 环境变量 (jetson nano)
+    配置 trtexec 环境变量 (Jetson nano)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#xxxengine-jetson-nano" class="md-nav__link">
-    导出 xxx.engine 文件 (jetson nano)
+    导出 xxx.engine 文件 (Jetson nano)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#jetson-nano_1" class="md-nav__link">
-    修改推理代码 (jetson nano)
+  <a href="#jetson-nano" class="md-nav__link">
+    修改推理代码 (Jetson nano)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     编译运行
   </a>
   
@@ -651,21 +658,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     摄像头检测
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     串口通信
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     户外使用
   </a>
   
@@ -1023,6 +1030,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    更换国内安装源
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pip3" class="md-nav__link">
     配置 pip3
   </a>
@@ -1030,7 +1044,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     安装工具
   </a>
   
@@ -1042,7 +1056,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     模型部署
   </a>
   
@@ -1058,27 +1072,27 @@
         
           <li class="md-nav__item">
   <a href="#trtexec-jetson-nano" class="md-nav__link">
-    配置 trtexec 环境变量 (jetson nano)
+    配置 trtexec 环境变量 (Jetson nano)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#xxxengine-jetson-nano" class="md-nav__link">
-    导出 xxx.engine 文件 (jetson nano)
+    导出 xxx.engine 文件 (Jetson nano)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#jetson-nano_1" class="md-nav__link">
-    修改推理代码 (jetson nano)
+  <a href="#jetson-nano" class="md-nav__link">
+    修改推理代码 (Jetson nano)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     编译运行
   </a>
   
@@ -1090,21 +1104,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     摄像头检测
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     串口通信
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     户外使用
   </a>
   
@@ -1125,7 +1139,7 @@
                   
 
   
-    <a href="https://github.com/Lei00764/note/edit/main/docs/Dev/jetson nano 零基础入门.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Lei00764/note/edit/main/docs/Dev/Jetson nano 部署 YoloV8.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1133,11 +1147,11 @@
   
 
 
-<h1 id="jetson-nano">jetson nano 零基础入门<a class="headerlink" href="#jetson-nano" title="Permanent link">&para;</a></h1>
+<h1 id="jetson-nano-yolov8">Jetson nano 部署 YoloV8<a class="headerlink" href="#jetson-nano-yolov8" title="Permanent link">&para;</a></h1>
 <h2 id="_1">前言<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>需要的物品：</p>
 <ul>
-<li>jetson nano 板子</li>
+<li>Jetson nano 板子</li>
 <li>SD 卡、读取器</li>
 <li>无线网卡</li>
 <li>电源</li>
@@ -1149,10 +1163,9 @@
 </ul>
 <h2 id="_2">准备<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="_3">烧录系统<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p><code>jetson-nano-jp461-sd-card-image.zip</code>，解压，使用 <code>balenaEtcher</code> 软件将解压后的文件烧录到 SD 卡中</p>
-<p>调整板子上的跳线帽（请注意，板子上原本的跳线帽只插了一个针脚，如果你用 5V4A 的DC电源，需要把跳线帽轻轻拔起，把两个针脚都插上，才可以正常使用 DC 电源哟！</p>
-<p>将 SD 卡插入到 jetson nano 板子上，连接好鼠标、键盘、网线和显示器</p>
-<p>（板子上有一个绿色指示灯）</p>
+<p>下载 Jetson nano 系统镜像：<a href="https://pan.baidu.com/s/178A568iL4usDGrbkvxckzA?pwd=nano">https://pan.baidu.com/s/178A568iL4usDGrbkvxckzA?pwd=nano</a> (提取码: nano)。根据 Jetson nano 型号选择 4GB 或者 2GB，我这里选择的是 4GB，JetPack4.6.1，对应压缩包 jetson-nano-jp461-sd-card-image.zip，下载完成后，进行解压，使用 balenaEtcher 软件将解压后的文件烧录到 SD 卡中</p>
+<p>调整板子上的跳线帽（请注意，板子上原本的跳线帽只插了一个针脚，如果你用 5V4A 的 DC 电源，需要把跳线帽轻轻拔起，把两个针脚都插上，才可以正常使用 DC 电源哟！</p>
+<p>将 SD 卡插入到 Jetson nano 板子上，连接好鼠标、键盘、无线网卡和显示器（板子上有一个绿色指示灯）</p>
 <h3 id="_4">常用命令<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>查看用户名：</p>
 <div class="highlight"><pre><span></span><code>whoami
@@ -1160,29 +1173,29 @@
 <p>查看ip地址：</p>
 <div class="highlight"><pre><span></span><code>ifconfig
 </code></pre></div>
-<p>切换高低功率
-有两种供电方式，10W和5W</p>
+<p>切换高低功率：Jetson nano 有两种供电方式，10W和5W</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nvpmodel<span class="w"> </span>-q<span class="w">  </span><span class="c1"># 查看当前是那个模式</span>
-sudo<span class="w"> </span>nvpmodel<span class="w"> </span>-m<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c1"># 将当前模式切换到5W模式,将会自动关掉两个cpu,只使用cpu1,2</span>
+
+sudo<span class="w"> </span>nvpmodel<span class="w"> </span>-m<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c1"># 将当前模式切换到5W模式，将会自动关掉两个cpu,只使用cpu1,2</span>
+sudo<span class="w"> </span>nvpmodel<span class="w"> </span>-m<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="c1"># 切换到高功率模式</span>
 </code></pre></div>
-<p>两种模式，0 是高功率10w,1是低功率5w,默认状态是高功率。</p>
-<p>sudo nvpmodel -m 0</p>
+<p>两种模式，0 是高功率10w，1是低功率5w，默认状态是高功率。</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>jetson_clocks<span class="w">  </span><span class="c1"># 固定 CPU 频率</span>
 </code></pre></div>
-<p>nano有两种供电方式，一种是5V 2.5A(10W)的microUSB供电；但如果你要有很多外设在（键盘、鼠标、wifi、显示器）在使用，最好用5V 4A(20W)的供电方式，来保证nano的正常工作。</p>
+<p>Jetson nano 有两种常用供电方式，一种是 5V 2.5A(12.5W) 的 microUSB 供电；但如果你有很多外设在（如键盘、鼠标、wifi、显示器等）在使用，最好用 5V 4A(20W) 的供电方式，来保证 Jetson nano 的正常工作。</p>
 <h3 id="_5">移除无用软件<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>移除LibreOffice会为系统省很多空间，这个软件对做深度学习和计算机视觉算法也没有太多用</p>
+<p>移除 libreoffice 会为系统省很多空间，这个软件对做深度学习和计算机视觉算法也没有太多用</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>purge<span class="w"> </span>libreoffice*
 sudo<span class="w"> </span>apt-get<span class="w"> </span>clean
 </code></pre></div>
-<p>更换国内安装源：</p>
-<p>备份原先source.list</p>
-<div class="highlight"><pre><span></span><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+<h3 id="_6">更换国内安装源<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>备份原先 source.list</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cp<span class="w"> </span>/etc/apt/sources.list<span class="w"> </span>/etc/apt/sources.list.bak
 </code></pre></div>
-<p>修改source.list</p>
+<p>修改 source.list</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>vim<span class="w">  </span>/etc/apt/sources.list
 </code></pre></div>
-<p>将以下内容替换原内容</p>
+<p>用以下内容替换原内容</p>
 <div class="highlight"><pre><span></span><code>deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic main multiverse restricted universe
 deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-security main multiverse restricted universe
 deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-updates main multiverse restricted universe
@@ -1195,24 +1208,25 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-backports main 
 <p>更新软件列表</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span>
 </code></pre></div>
-<p>配置cuda的环境变量</p>
-<div class="highlight"><pre><span></span><code>vi ~/.bashrc
+<p>打开 ./bashrc，配置 cuda 的环境变量</p>
+<div class="highlight"><pre><span></span><code>vim<span class="w"> </span>~/.bashrc
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/cuda/bin<span class="si">${</span><span class="nv">PATH</span><span class="p">:+:</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}}</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/cuda/lib64<span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="p">:+:</span><span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="si">}}</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_ROOT</span><span class="o">=</span>/usr/local/cuda
+<p>向 ./bashrc 加入以下内容</p>
+<div class="highlight"><pre><span></span><code>export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export CUDA_ROOT=/usr/local/cuda
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>source ~/.bashrc
+<p>使修改生效</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.bashrc
 </code></pre></div>
-<p>查看cuda版本：</p>
+<p>查看cuda版本</p>
 <div class="highlight"><pre><span></span><code>nvcc<span class="w"> </span>-V
 </code></pre></div>
 <h3 id="pip3">配置 pip3<a class="headerlink" href="#pip3" title="Permanent link">&para;</a></h3>
-<p>了解 jetson 平台自带的 python 版本</p>
-<p>以 jetson nano为例，可以使用</p>
+<p>了解 Jetson nano 平台自带的 Python 版本</p>
 <div class="highlight"><pre><span></span><code>ls<span class="w"> </span>/usr/bin/python*
 </code></pre></div>
-<p>安装 pip</p>
+<p>安装 pip3</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>update
 sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip
 </code></pre></div>
@@ -1223,7 +1237,7 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 <p>版本太低，更新版本</p>
 <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip<span class="w"> </span>setuptools<span class="w"> </span>wheel
 </code></pre></div>
-<h3 id="_6">安装工具<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="_7">安装工具<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>安装 jtop，查看 CPU 和 GPU 资源</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>jetson-stats
 </code></pre></div>
@@ -1231,18 +1245,19 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>jtop
 </code></pre></div>
 <p>如果不能使用，请重启，或者自行百度</p>
-<h2 id="_7">模型部署<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_8">模型部署<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>以下内容参考：<a href="https://blog.csdn.net/qq_40672115/article/details/129640372">https://blog.csdn.net/qq_40672115/article/details/129640372</a></p>
 <p>流程： <code>xx.pt</code> -&gt; <code>xx.onnx</code> -&gt; <code>xx.engine</code></p>
 <p>其中 <code>xx.pt</code> -&gt; <code>xx.onnx</code> 在电脑上完成，<code>xx.onnx</code> -&gt; <code>xx.engine</code> 在板子上实现</p>
 <h3 id="xxxonnx">导出 xxx.onnx 文件 (本地电脑)<a class="headerlink" href="#xxxonnx" title="Permanent link">&para;</a></h3>
-<p>下载 yolov8 代码</p>
+<p>下载 YoloV8 代码</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ultralytics/ultralytics.git
 </code></pre></div>
 <p>下载将 <code>.onnx</code> 转换为 <code>xx.engine</code> 代码</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/shouxieai/infer.git
 </code></pre></div>
-<p>在 <code>ultralytics</code> 中创建一个 <code>weights</code> 文件夹，将训练好的模型文件 <code>best.pt</code> 放进去</p>
-<p>在 <code>ultralytics</code> 中创建 <code>detect.py</code> 文件，检测模型的正确性</p>
+<p>在 ultralytics 中创建一个 weights 文件夹，将训练好的模型文件 <code>best.pt</code> 放进去</p>
+<p>在 ultralytics 中创建 <code>detect.py</code> 文件，检测模型的正确性</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># @time   : 2023/7/12 10:23</span>
 <span class="c1"># @author : Xiang Lei</span>
 <span class="c1"># opencv自己有一个缓存，每次会顺序从自己的缓存中读取，而不是直接读取最新帧</span>
@@ -1316,7 +1331,7 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
 </code></pre></div>
-<p>在 <code>ultralytics</code> 中创建 <code>export.py</code> 文件，将 <code>best.py</code> 转换成 <code>best.onnx</code></p>
+<p>在 ultralytics 中创建 <code>export.py</code> 文件，将 <code>best.py</code> 转换成 <code>best.onnx</code></p>
 <div class="highlight"><pre><span></span><code><span class="c1"># @time   : 2023/7/13 20:38</span>
 <span class="c1"># @author : Xiang Lei</span>
 
@@ -1379,33 +1394,33 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </code></pre></div>
-<p>在命令行终端输入如下指令即可添加Transpose节点，执行完成之后在当前目录下生成<code>best.transd.onnx</code>模型，该模型添加了Transpose节点。</p>
+<p>在命令行终端输入如下指令即可添加Transpose节点，执行完成之后在当前目录下生成 <code>best.transd.onnx</code> 模型，该模型添加了Transpose节点。</p>
 <div class="highlight"><pre><span></span><code>python3<span class="w"> </span>v8trans.py<span class="w"> </span>best.onnx
 </code></pre></div>
 <p>（将ONNX模型 <code>best.transd.onnx</code> 放入到infer/workspace文件夹下）</p>
 <p><strong>将 <code>infer</code> 文件夹的所有内容放到 <code>jetson nano</code> 板子上</strong></p>
-<h3 id="trtexec-jetson-nano">配置 trtexec 环境变量 (jetson nano)<a class="headerlink" href="#trtexec-jetson-nano" title="Permanent link">&para;</a></h3>
-<p>1.打开bashrc文件</p>
+<h3 id="trtexec-jetson-nano">配置 trtexec 环境变量 (Jetson nano)<a class="headerlink" href="#trtexec-jetson-nano" title="Permanent link">&para;</a></h3>
+<p>打开bashrc文件</p>
 <div class="highlight"><pre><span></span><code>vim<span class="w"> </span>~/.bashrc
-<span class="m">2</span>.按i进入输入模式，在最后一行添加如下语句
 </code></pre></div>
+<p>按 i 进入输入模式，在最后一行添加如下语句</p>
 <div class="highlight"><pre><span></span><code>export PATH=/usr/src/tensorrt/bin:$PATH
 </code></pre></div>
-<p>3.按下esc，输入:wq!保存退出即可，最后刷新下环境变量</p>
+<p>3.按下 esc 键，输入 <code>:wq!</code> 保存退出即可，最后刷新下环境变量</p>
 <div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>~/.bashrc
 </code></pre></div>
-<h3 id="xxxengine-jetson-nano">导出 xxx.engine 文件 (jetson nano)<a class="headerlink" href="#xxxengine-jetson-nano" title="Permanent link">&para;</a></h3>
-<p>在 <code>infer</code> 目录执行</p>
+<h3 id="xxxengine-jetson-nano">导出 <code>xxx.engine</code> 文件 (Jetson nano)<a class="headerlink" href="#xxxengine-jetson-nano" title="Permanent link">&para;</a></h3>
+<p>在 infer 目录执行</p>
 <div class="highlight"><pre><span></span><code>trtexec<span class="w"> </span>--onnx<span class="o">=</span>workspace/best.transd.onnx<span class="w"> </span>--saveEngine<span class="o">=</span>workspace/best.transd.engine
 </code></pre></div>
-<p>开始编译，需要一段时间......</p>
-<h3 id="jetson-nano_1">修改推理代码 (jetson nano)<a class="headerlink" href="#jetson-nano_1" title="Permanent link">&para;</a></h3>
+<p>开始编译，需要一段时间</p>
+<h3 id="jetson-nano">修改推理代码 (Jetson nano)<a class="headerlink" href="#jetson-nano" title="Permanent link">&para;</a></h3>
 <p>为了使用上面得到的 <code>best.transd.engine</code> ，需要对部分源码进行修改</p>
-<p>yolo模型的推理代码主要在src/main.cpp文件中，需要推理的图片放在workspace/inference文件夹中，源码修改较简单主要有以下几点：</p>
-<p>1.main.cpp 134，135行注释，只进行单张图片的推理</p>
-<p>2.main.cpp 104行 修改加载的模型为best_transd.sim.engine且类型为V8</p>
-<p>3.main.cpp 10行 新增mylabels数组，添加自训练模型的类别名称</p>
-<p>4.mian.cpp 115行 cocolabels修改为mylabels</p>
+<p>yolo 模型的推理代码主要在 src/main.cpp 文件中，需要推理的图片放在 workspace/inference 文件夹中，源码修改较简单主要有以下几点：</p>
+<p>1.main.cpp 134，135 行注释，只进行单张图片的推理</p>
+<p>2.main.cpp 104 行 修改加载的模型为 best_transd.sim.engine 且类型为 V8</p>
+<p>3.main.cpp 10 行 新增 mylabels 数组，添加自训练模型的类别名称</p>
+<p>4.mian.cpp 115 行 cocolabels 修改为 mylabels</p>
 <p>具体修改如下</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// perf();                    //修改1 134 135行注释</span>
@@ -1420,8 +1435,8 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 
 <span class="k">auto</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mylabels</span><span class="p">[</span><span class="n">obj</span><span class="p">.</span><span class="n">class_label</span><span class="p">]</span><span class="w">       </span><span class="c1">// 修改4 cocolabels修改为mylabels</span>
 </code></pre></div>
-<h3 id="_8">编译运行<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>编译用到的Makefile文件需要修改，修改后的Makefile文件如下</p>
+<h3 id="_9">编译运行<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>编译用到的 Makefile 文件需要修改，修改后的 Makefile 文件如下</p>
 <div class="highlight"><pre><span></span><code><span class="nv">cc</span><span class="w">        </span><span class="o">:=</span><span class="w"> </span>g++
 <span class="nv">nvcc</span><span class="w">      </span><span class="o">=</span><span class="w"> </span>/usr/local/cuda-10.2/bin/nvcc
 
@@ -1515,10 +1530,10 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 </code></pre></div>
 <p>出现错误： make: Warning: File "xxx" has modification time yyy s in the future</p>
 <p>参考： https://blog.csdn.net/u012814856/article/details/99873057</p>
-<h2 id="_9">摄像头检测<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h2 id="_10">摄像头检测<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p>简单写了一个摄像头检测的 demo，主要修改以下几点：</p>
-<p>1.main.cpp 新增yolo_video_demo()函数，具体内容参考下面</p>
-<p>2.main.cpp 新增调用yolo_video_demo()函数代码，具体内容参考下面</p>
+<p>1.main.cpp 新增 yolo_video_demo() 函数，具体内容参考下面</p>
+<p>2.main.cpp 新增调用 yolo_video_demo() 函数代码，具体内容参考下面</p>
 <div class="highlight"><pre><span></span><code><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">yolo_video_demo</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">engine_file</span><span class="p">){</span><span class="w">     </span><span class="c1">// 修改1 新增函数</span>
 <span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">yolo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">yolo</span><span class="o">::</span><span class="n">load</span><span class="p">(</span><span class="n">engine_file</span><span class="p">,</span><span class="w"> </span><span class="n">yolo</span><span class="o">::</span><span class="n">Type</span><span class="o">::</span><span class="n">V8</span><span class="p">);</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">yolo</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w">  </span><span class="k">return</span><span class="p">;</span>
@@ -1569,13 +1584,13 @@ sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> <
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="_10">串口通信<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<p>先在nano上查看启用的串口</p>
-<p><code>ls -l /dev/tty*</code> </p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">777</span><span class="w"> </span>/dev/ttyUSB0
+<h2 id="_11">串口通信<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>先在 Jetson nano 上查看启用的串口</p>
+<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span>/dev/tty*
 </code></pre></div>
-<h2 id="_11">户外使用<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
-<p>使用 微雪 UPS Power Module (B) 电源</p>
+<p>参考：<a href="https://blog.csdn.net/qq_25662827/article/details/122581819">https://blog.csdn.net/qq_25662827/article/details/122581819</a></p>
+<h2 id="_12">户外使用<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>使用微雪 UPS Power Module (B) 电源</p>
 <p>安装教程：<a href="https://www.bilibili.com/video/BV1Be4y1Q7id">https://www.bilibili.com/video/BV1Be4y1Q7id</a></p>
 <p>参考：<a href="https://blog.csdn.net/qq_40672115/article/details/129640372">https://blog.csdn.net/qq_40672115/article/details/129640372</a></p>
 

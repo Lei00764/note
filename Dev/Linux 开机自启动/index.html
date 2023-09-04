@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://lei00764.github.io/note/Dev/Linux%20%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8/">
       
       
-        <link rel="prev" href="../jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+        <link rel="prev" href="../Jetson%20nano%20%E9%83%A8%E7%BD%B2%20YoloV8/">
       
       
         <link rel="next" href="../../Web/%E5%88%9B%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF%E9%A1%B9%E7%9B%AE/">
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linux" class="md-skip">
+        <a href="#desktop" class="md-skip">
           跳转至
         </a>
       
@@ -254,7 +254,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-tabs__link md-tabs__link--active">
+      <a href="../Jetson%20nano%20%E9%83%A8%E7%BD%B2%20YoloV8/" class="md-tabs__link md-tabs__link--active">
         开发
       </a>
     </li>
@@ -514,8 +514,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../jetson%20nano%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" class="md-nav__link">
-        jetson nano 零基础入门
+      <a href="../Jetson%20nano%20%E9%83%A8%E7%BD%B2%20YoloV8/" class="md-nav__link">
+        Jetson nano 部署 YoloV8
       </a>
     </li>
   
@@ -534,8 +534,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Linux 开机自启动
@@ -551,8 +549,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -955,8 +951,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1089,7 +1083,8 @@
   
 
 
-<h1 id="linux">Linux 开机自启动<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
+  <h1>Linux 开机自启动</h1>
+
 <p>我这里使用开机自启动的目的是：在 Jetson Nano 板上部署 Yolov8 算法，用于可乐和保鲜盒的检测。希望在设备开机后，能够自动进行目标检测，并将检测结果发送给上位机。</p>
 <p>下面介绍三种 Linux 开机自启动方式</p>
 <ul>
@@ -1119,7 +1114,17 @@ X-GNOME-Autostart-enabled=true
 </ul>
 <h3 id="demo">demo<a class="headerlink" href="#demo" title="Permanent link">&para;</a></h3>
 <p>在 <code>~/.config/autostart/</code>文件夹下创建 <code>demo.desktop</code>文件</p>
-<p>【待补充】</p>
+<div class="highlight"><pre><span></span><code>[Desktop Entry]
+Type=Application
+Exec=gnome-terminal -x bash -c &quot;/home/lei/Desktop/infer/workspace/qzj.sh;exec bash&quot;
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=qzj_infer
+Name=qzj_infer
+Comment[en_US]=start qzj_infer program
+Comment=start qzj_infer program
+</code></pre></div>
 <h3 id="_1">注意<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>需要 <code>root</code> 权限</p>
 <h2 id="etcrclocal">修改 <code>/etc/rc.local</code> 文件<a class="headerlink" href="#etcrclocal" title="Permanent link">&para;</a></h2>
