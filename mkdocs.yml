@@ -6,7 +6,11 @@ site_description: 雷翔的个人网站
 
 nav:
   - 软件:
-    - Software/C++语法.md
+    - C++:
+      - Software/C++/C++语法.md
+    - CV:
+      - Software/CV/绪论.md
+      - Software/CV/第一篇：全景拼接.md
   - 科研:
     - Research/index.md
   - 开发:
