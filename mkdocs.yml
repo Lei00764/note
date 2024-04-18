@@ -12,7 +12,7 @@ nav:
       - Software/CV/绪论.md
       - Software/CV/第一篇：全景拼接.md
   - 科研:
-    - Research/index.md
+    - ML/Logistic Regression.md
   - 开发:
     - Dev/Jetson nano 部署 YoloV8.md
     - Dev/Linux 开机自启动.md
