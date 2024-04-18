@@ -12,13 +12,13 @@
         <meta name="author" content="雷翔">
       
       
-        <link rel="canonical" href="https://lei00764.github.io/note/Ref/nlp%E7%A0%94%E7%A9%B6%E7%94%9F%E4%B8%8D%E4%BC%9A%E8%87%AA%E5%B7%B1%E5%86%99%E4%BB%A3%E7%A0%81%E6%80%8E%E4%B9%88%E5%8A%9E/">
+        <link rel="canonical" href="https://lei00764.github.io/note/ML/Logistic%20Regression/">
       
       
-        <link rel="prev" href="../%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/">
+        <link rel="prev" href="../../Software/CV/%E7%AC%AC%E4%B8%80%E7%AF%87%EF%BC%9A%E5%85%A8%E6%99%AF%E6%8B%BC%E6%8E%A5/">
       
       
-        <link rel="next" href="../../CV/">
+        <link rel="next" href="../../Dev/Jetson%20nano%20%E9%83%A8%E7%BD%B2%20YoloV8/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Nlp研究生不会自己写代码怎么办 - 雷翔的个人网站</title>
+        <title>Logistic Regression - 雷翔的个人网站</title>
       
     
     
@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#logistic-regression" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Nlp研究生不会自己写代码怎么办
+              Logistic Regression
             
           </span>
         </div>
@@ -247,11 +252,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../ML/Logistic%20Regression/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -327,13 +334,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../Ref/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" class="md-tabs__link">
           
   
     
@@ -637,8 +642,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -647,19 +654,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -670,7 +678,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             科研
@@ -681,10 +689,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../ML/Logistic%20Regression/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Logistic Regression
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -693,6 +721,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      数学模型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      参数求解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      多分类问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      非线性分类问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      正则化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sigmoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要用 Sigmoid 函数？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考：
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1017,10 +1137,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1031,20 +1149,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1055,7 +1172,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             转载
@@ -1069,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" class="md-nav__link">
+      <a href="../../Ref/%E6%8F%90%E9%97%AE%E7%9A%84%E6%99%BA%E6%85%A7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1087,17 +1204,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Ref/nlp%E7%A0%94%E7%A9%B6%E7%94%9F%E4%B8%8D%E4%BC%9A%E8%87%AA%E5%B7%B1%E5%86%99%E4%BB%A3%E7%A0%81%E6%80%8E%E4%B9%88%E5%8A%9E/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1106,7 +1216,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1194,6 +1303,88 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      数学模型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      参数求解
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      多分类问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      非线性分类问题
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      正则化
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sigmoid" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要用 Sigmoid 函数？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码实现
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考：
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1208,7 +1399,7 @@
                   
 
   
-    <a href="https://github.com/Lei00764/note/edit/main/docs/Ref/nlp研究生不会自己写代码怎么办.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Lei00764/note/edit/main/docs/ML/Logistic Regression.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1216,61 +1407,154 @@
   
 
 
-  <h1>Nlp研究生不会自己写代码怎么办</h1>
+<h1 id="logistic-regression">Logistic Regression<a class="headerlink" href="#logistic-regression" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>分类模型和回归模型的区别：
+主要看输出变量的类型，分类模型的输出结果是离散的，而回归模型的输出结果是连续的</p>
+</blockquote>
+<p>Logistic Regression
+虽然叫做 Logistic 回归？但其实是一种分类模型，常用于解决二分类问题</p>
+<p>用一句话介绍 Logistic Regression：假设数据分布遵循<strong>伯努利分布</strong>，通过极大似然估计的方法来求解参数</p>
+<p>本篇文章主要内容包括以下几点：
+1. Logistic Regression 的数学模型怎么样的？
+2. 如何求解 Logistic Regression 的参数？
+3. Logistic Regression 和 Linear Regression 的区别在哪里？和贝叶斯的关系呢？
+4. Logistic Regression 能否用于求解多分类问题？（面试也许会问）
+5. Logistic Regression 能否用于求解非线性分类数据？
+6. 对正则化的一些理解
+7. Logistic Regression 为什么要用 Sigmoid 函数？（面试大概率会问）</p>
+<p>现在假设有这么一个数据样本 <span class="arithmatex">\(D\)</span>，<span class="arithmatex">\(D = {(x_1, y_1), (x_2, y_2), ..., (x_i, y_i), ..., (x_n, y_n)}\)</span>，其中 <span class="arithmatex">\((x_i, y_i)\)</span> 代表一个数据样本，<span class="arithmatex">\(x_i\)</span> 代表维度为 <code>m</code> 的输入向量，<span class="arithmatex">\(y_i\)</span> 表示真实结果，且 <span class="arithmatex">\(y_i \in {0, 1}\)</span>， <span class="arithmatex">\(y_i=1\)</span> 表示正例，<span class="arithmatex">\(y_i=0\)</span> 表示反例</p>
+<h2 id="_1">数学模型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Logistic Regression = Linear Regression + Sigmoid</p>
+<p>其数学模型可表示为：</p>
+<div class="arithmatex">\[
+P(y|x; \theta) = \sigma(\sum_i(w_ix_i+b_i)) = \sigma(\sum_i(w^Tx+b))
+\]</div>
+<p>其中，<span class="arithmatex">\(\sigma(z) = \frac{1}{1+e^{-z}}\)</span>，即 Sigmoid 函数</p>
+<p>在做二分类任务时，通过阈值来判断样本属于正例还是反例，例如，设置阈值为 0.5，即当 <span class="arithmatex">\(P(y=1|x; \theta) &gt; 0.5\)</span> 时，判断为正例，否则归为反例</p>
+<p>可以通过调整阈值大小来改善模型性能，例如，若提高该阈值，则模型的 Precision，即查准率会上升；弱降低该阈值，则模型的 Recall，即查全率会上升</p>
+<h2 id="_2">参数求解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>从概率学角度来看，使用极大似然估计来求解</p>
+<p>极大似然估计说的是，求解一组参数，使得在这组参数下，数据的似然度（概率）越大。换句话就是，<strong>利用已知的数据样本，找出最有可能生成该样本的参数</strong></p>
+<p>在介绍似然函数之前，先来介绍一下伯努利分布，伯努利分布是一种离散概率分布，表示只有两种可能分布的随机事件，即 0 和 1，其中 1 表示成功， 0 表示失败。成功的概率记作 p，则失败的概率记作 1-p。</p>
+<p>伯努利分布的概率密度函数可表示为：</p>
+<div class="arithmatex">\[
+P(x) = p^x(1-p)^{1-x} = 
+ \begin{cases}
+ p,\,\,x=1\\
+ 1-p,\,\,x=0\\
+ \end{cases}
+\]</div>
+<blockquote>
+<p>概率密度函数：对于离散型随机变量，概率密度函数描述该变量在每个可能取值处的概率</p>
+</blockquote>
+<p>对于 Logistic Regression 来说，模型的似然函数（似然度）表示如下：</p>
+<div class="arithmatex">\[
+L(\theta|D) = P(D|\theta) = \prod P(y|x; \theta) = \prod (\sigma(w^Tx+b))^y(1-\sigma(w^Tx+b))^{1-y}
+\]</div>
+<p>似然函数值（似然度）越大越好</p>
+<p>值得注意的是，<span class="arithmatex">\(L(\theta|D)\)</span> 和 <span class="arithmatex">\(P(D|\theta)\)</span> 分别从两个角度来描述事件发生的可能性，前者指的是从观测结果出发，什么样的参数最有可能导致结果 <span class="arithmatex">\(D\)</span> 出现；后者则表示已知参数 <span class="arithmatex">\(\theta\)</span>，发生观测结果 <span class="arithmatex">\(D\)</span> 的可能性大小</p>
+<p>在机器学习中，通常用损失函数来衡量模型预测结果的好坏，其定义如下：</p>
+<div class="arithmatex">\[
+J(\theta) = -\frac{1}{N}\ln(L(\theta|D)) = -\frac{1}{N}\sum y\ln(\sigma(w^Tx+b)) + (1-y)(\ln(1-\sigma(w^T+b)))
+\]</div>
+<p>下面使用梯度下降法来求解一组参数，使得损失函数值最小！
+梯度下降，也称最速梯度下降，用一句话总结就是，<strong>每一个都朝向梯度下降最快的方向走</strong></p>
+<p>具体可分为三步：
+1. 选择梯度下降方向，即 <span class="arithmatex">\(-\nabla J(\theta)\)</span>
+2. 确定走多远，即 <span class="arithmatex">\(\theta^i = \theta^{i-1} - \alpha J(\theta)\)</span>
+3. 重复上述两步，直至找到梯度为零的点或者到达最大迭代次数</p>
+<p>下面基于随机梯度下降法，通过数学推导的方式求解参数</p>
+<div class="arithmatex">\[
+\begin{align*}
+\frac{\partial{J(\theta)}}{\partial{w}} 
+&amp;= -\frac{1}{N} \sum \frac{y}{\sigma(w^Tx+b)} \cdot \sigma(w^Tx+b)(1-\sigma(w^Tx+b)) \cdot x + \frac{1-y}{1-\sigma(w^Tx+b)} \cdot (-\sigma(w^Tx+b)) \cdot (1-\sigma(w^Tx+b)) \cdot x \\
+&amp;= -\frac{1}{N} \sum xy(1-\sigma(w^Tx+b)) - (1-y)x \sigma(w^Tx+b) \\
+&amp;= -\frac{1}{N} \sum xy - x \sigma(w^Tx+b)
+\end{align*}
+\]</div>
+<p>注：上面式子中的 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 表示一个数据样本；<span class="arithmatex">\(\sigma(w^Tx+b)\)</span> 表示的是输入样本 <span class="arithmatex">\(x\)</span>，得到的预测值</p>
+<p>实际上，Logistic Regression 的函数函数是凸函数，因此可以保证我们找到的局部最优值同时也是全局最优值；还可以使用牛顿法来求解该问题</p>
+<h2 id="_3">多分类问题<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Logistic Regression 通常是用来解决二分类问题，即使用 Sigmoid 将结果映射到一个 0~1 之间的数据，然后通过预先设定一个阈值来判断属于正例还是反例</p>
+<p>解决多分类问题有两个思路，一种思路是训练多个二分类器，这种方法适合于类别与类别之间不是互斥的，另一种思路是使用 Softmax 函数，即 Multinomial Logistic Regression，这种方法适合于类别与类别之间是互斥的</p>
+<blockquote>
+<p>多元 logistics 回归实际就是多个二元 logistics 回归模型描述各类与参考分类相比各因素的作用。如， 对于一个三分类的因变量（口味：酸、甜、辣），可建立两个二元logistics回归模型，分别描述酸味与甜味相比及辣味与酸味相比，各口味的作用。但在估计这些模型参数时，所有对象是一起估计的，其他参数的意义及模型的筛选等与二元logistics类似。</p>
+</blockquote>
+<p>对应的数学建模形式如下：</p>
+<div class="arithmatex">\[
+P(y=i|x, \theta) = \frac{e^{w_i^Tx+b_i}}{\sum_j^Ke^{w_j^Tx+b_j}}
+\]</div>
+<h2 id="_4">非线性分类问题<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>Logistic Regression 本质上是一个线性模型，但是可以用来求解非线性可分的数据</p>
+<p>方法：通过特征变换的方法，对数据升维，因为在低维空间不可分的数据，到高维空间中线性可分的几率会高一些
+e.g. 原始特征有两个维度，即  <span class="arithmatex">\([x_1,x_2]\)</span>，可以通过特征变换的方式，增加新的数据维度，例如， <span class="arithmatex">\([x_1,x_2,x_1^2,x_2^2,x_1x_2]\)</span> </p>
+<h2 id="_5">正则化<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>为什么会提出正则化？或者说正则化能解决什么问题？
+当模型参数过多时，很容易出现过拟合，正则化的提出主要是为了解决过拟合问题，并提高模型在未见数据上的泛化能力</p>
+<p>正则化通过在损失函数中引入一个惩罚项，惩罚项主要跟模型的权重相关，添加正则项之后，模型倾向于学习更加学习更加简单的模型，降低权重的影响！</p>
+<p>常见的正则项： <span class="arithmatex">\(L_1\)</span> 正则化和 <span class="arithmatex">\(L_2\)</span> 正则化</p>
+<p>添加正则项后的损失函数：</p>
+<div class="arithmatex">\[
+J(\theta) = -\frac{1}{N}\ln(L(\theta|D)) = -\frac{1}{N}\sum y\ln(\sigma(w^Tx+b)) + (1-y)(\ln(1-\sigma(w^T+b))) + \lambda||w_i||_p
+\]</div>
+<p><span class="arithmatex">\(L_1\)</span> 正则化：
+- 使权重尽可能为 0
+- 适用于模型剪枝，模型压缩等问题
+<span class="arithmatex">\(L_2\)</span> 正则化：
+- 使权重值分布更平滑，但通常不会使权重变为 0
+- 适用于解决普通的过拟合问题</p>
+<h2 id="sigmoid">为什么要用 Sigmoid 函数？<a class="headerlink" href="#sigmoid" title="Permanent link">&para;</a></h2>
+<p>首先来说一下为什么可以用，<span class="arithmatex">\(\sum(wx_i+b)\)</span> 的输出值是实数，而样本的类标签为 {0, 1}，因为可以用过 Sigmoid 函数在这两者之间建立一个映射关系，而且平滑，方便求导，当然，类似的函数还有很多</p>
+<p>下面来说一下为什么要用 Sigmoid 函数，而不用别的函数？</p>
+<p><img alt="image.png" src="https://lei-1306809548.cos.ap-shanghai.myqcloud.com/Obsidian20240418201306.png" /></p>
+<blockquote>
+<p>最大熵原理：学习概率模型时，在所有可能的概率模型（即概率分布）中，熵最大的模型是最好的模型</p>
+</blockquote>
+<h2 id="_6">代码实现<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">@File    :   main.py</span>
+<span class="sd">@Time    :   2024/04/18 11:56:58</span>
+<span class="sd">@Author  :   Xiang Lei</span>
+<span class="sd">@Version :   1.0</span>
+<span class="sd">@Desc    :   logistic Regression 算法复现</span>
 
-<p><a href="https://www.zhihu.com/question/615441114/answer/3150040683">https://www.zhihu.com/question/615441114/answer/3150040683</a></p>
-<p>挑一个最简单的框架</p>
-<p>（我觉得<a href="https://www.zhihu.com/search?q=llama%202&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">llama 2</a>就不错，generate才300行）</p>
-<p>然后在上面魔改成一个只有你自己看得懂的屎山</p>
-<p>发论文够了</p>
-<hr />
-<p>23.8.28更新：</p>
-<p>我随手写的东西能有好几十个<a href="https://www.zhihu.com/search?q=%E6%94%B6%E8%97%8F&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">收藏</a>，其实有点意料不到，多说一点吧</p>
-<p>我只懂generate这一步，就先来说为什么其他框架这部分代码，相比于<a href="https://www.zhihu.com/search?q=llama2&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">llama2</a>更复杂</p>
-<p>过去，大模型出来的之前，大家对于<a href="https://www.zhihu.com/search?q=%E6%9C%80%E4%BC%98&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">最优</a>的生成方式没有共识</p>
-<p>最大化模型可能性的方法，就有greedy, beam search, stochastic beam search, diverse beam search……</p>
-<p>单就这<a href="https://www.zhihu.com/search?q=diverse%20beam%20search&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">diverse beam search</a>我就能找出七八种，若是找不出来，我现想也能给你想够八种</p>
-<p>抽样的方法，就有sampling，temperature sampling，top-k/top-p sampling，nucleus sampling，以及几种方法的<a href="https://www.zhihu.com/search?q=%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">排列组合</a></p>
-<p>除此之外，过去模型小，还得打一堆补丁。比如length penalty，repetition penalty，等等……</p>
-<p>那么过去的框架，比如hugging_face，以及我更熟悉的<a href="https://www.zhihu.com/search?q=seq2seq&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">seq2seq</a>是怎么办的呢？</p>
-<p>当然是全写上，任君挑选</p>
-<p>于是，generate简简单单就突破3000行</p>
-<p>代码不好的同学如我，头发也就跟着垮垮掉</p>
-<p>那llama 2为什么轻量化了呢？</p>
-<p>在<a href="https://www.zhihu.com/search?q=%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%97%B6%E4%BB%A3&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">大模型时代</a>，大家似乎在生成方式上达成了一个共识</p>
-<p>那就是nucleus sampling，或者只有temperature</p>
-<p>当然<a href="https://www.zhihu.com/search?q=chatgpt&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">chatgpt</a>的内部代码<a href="https://www.zhihu.com/search?q=%E6%88%91%E7%9C%8B%E4%B8%8D%E5%88%B0&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">我看不到</a>，我只是根据llama2的代码猜测的。说得肯定错的比对的多，希望大家指正。</p>
-<p>背后的原因，我想有几条。</p>
-<ol>
-<li>beam search的成本随着beam数量的增加而增加，在过去模型小的时候inference的成本可以忽略不计，现在跑一次很贵。sampling没有额外成本。</li>
-<li><a href="https://www.zhihu.com/search?q=sampling&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">sampling</a>的生成效果更像人话，符合人类说话的distribution。但是如果<a href="https://www.zhihu.com/search?q=temperature&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">temperature</a> 设为1，生成质量又太差了，所以还是调一下temperature，取个折中。</li>
-<li><a href="https://www.zhihu.com/search?q=%E6%8A%BD%E6%A0%B7%E6%96%B9%E6%B3%95&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">抽样方法</a>每次出来结果都不一样，满足用户对多样性的要求。如果用argmax类的方法想实现这一点，就得用那些diverse beam search 12345678，性能不好，主要是对<a href="https://www.zhihu.com/search?q=diversity&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">diversity</a>的定义不明确也不自然</li>
-</ol>
-<p>然后，随着模型质量的提升，也可能是抽样方法的先天优势，生成结果过短和重复的问题也解决了。过去打得补丁似乎也不需要了。</p>
-<p>所以llama2的generate.py就剩300行了。</p>
-<hr />
-<p>如果你想要实现你的beam search/diverse beam search/nucleus sampling/tree model sampling/<a href="https://www.zhihu.com/search?q=%E5%B8%B8%E6%B8%A9%E8%B6%85%E5%AF%BC&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">常温超导</a>sampling/先天八卦 beam search，怎么办呢？</p>
-<p>那就打开hugging_face的代码，一行行看懂了，抄进你的llama2的git里。再改。</p>
-<p>抄代码这事，一天一百行不过分吧</p>
-<p>你就也别<a href="https://www.zhihu.com/search?q=unit%20test&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">unit test</a>了，大概也不会，直接边写边整个test</p>
-<p>写一点test一点，肉眼debug</p>
-<p>再复杂的方法，两三天也抄完了</p>
-<p>不说对<a href="https://www.zhihu.com/search?q=%E7%AE%97%E6%B3%95&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">算法</a>更理解，单就是自己写的屎那也比别人的<a href="https://www.zhihu.com/search?q=%E9%BE%99%E6%B6%8E%E9%A6%99&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">龙涎香</a>要更容易看懂</p>
-<p>然后该干什么干什么，跑实验做测试写文章，手工小作坊呗</p>
-<p>科研嘛，不丢人</p>
-<p>那你要问了，我花这功夫，写出来代码还不如hugging_face原装，为啥不直接用人家的呢？</p>
-<p>别人的东西，用着爽，貌似改个东西只用加个几行</p>
-<p>但是，<a href="https://www.zhihu.com/search?q=debug&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A3150040683%7D">debug</a>起来可能要花2-3周，比自己写一遍多了好几倍的时间</p>
-<p>3000多行啊，你想找到哪个地方出错了真不容易，还是自己的屎山香</p>
-<p>那你又问，说如果我没遇到bug，就用人家的。遇到了再重写，不更好吗？</p>
-<p>我的经验是，人都是有惰性的。给你现成的，你肯定下不定决心抛弃不用从头写。</p>
-<p>不如开头就逼自己走歪门邪道</p>
-<p>最后一个问题，如果这么屎的代码，附在论文后面，不会影响其他人吗？</p>
-<p>其实大家也都各自有自己一坨屎山</p>
-<p>你的代码也就是pull下来跑一跑最基本的demo</p>
-<p>剩下的工作，还是会在自己的屎山上复现，不会在你之上改的</p>
-<hr />
-<p>我低估hugging face了。它的model.generate至少3w行，里面可以设置的参数比这篇文章点赞还多</p>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># Ref: https://realpython.com/logistic-regression-python/</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span>
+
+<span class="c1"># x: independent variable</span>
+<span class="c1"># y: dependent variable</span>
+
+<span class="c1"># x = np.arange(10).reshape(-1, 1)</span>
+<span class="c1"># 多维数据</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s2">&quot;liblinear&quot;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># 初始化一个 LR 模型</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">classes_</span><span class="p">)</span>  <span class="c1"># 有哪些类别/</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>  <span class="c1"># b 向量</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>  <span class="c1"># w 矩阵</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>  <span class="c1"># 预测结果 [[为0的概率, 为1的概率]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="_7">参考：<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>https://zhuanlan.zhihu.com/p/74874291
+https://zhuanlan.zhihu.com/p/58434325
+https://zhuanlan.zhihu.com/p/341387537
+https://realpython.com/logistic-regression-python/
+https://tech.meituan.com/2015/05/08/intro-to-logistic-regression.html</p>
 
 
 
